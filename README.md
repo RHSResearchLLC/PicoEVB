@@ -2,12 +2,12 @@
 
 ![Image of NanoEVB](./NanoEVB-X1-top.png)
 
-The NanoEVB-X1 is low cost development board which can be used to evaluate and prototype 
+The NanoEVB-X1 is an affordable development board which can be used to evaluate and prototype 
 PCI express designs using Xilinx Artix 7 FPGA on Windows or Linux hosts.
 The board is designed around the Artix 7 (XC7A50T).
 
 The NanoEVB-X1 is a complete development system in a M.2 (NGFF) 2242 footprint. The JTAG cable
-and all necessary power supplies are built in. It will work in the following ock slots:
+and all necessary power supplies are built in. It will work in the following slots:
  
 - M.2 2242 Key A
 - M.2 2242 Key E
