@@ -28,6 +28,8 @@ and all necessary power supplies are built in. It will work in the following slo
 
 [Check out the wiki](https://github.com/RHSResearchLLC/NanoEVB-X1/wiki)
 
+or contact info@nanoevb.com
+
 
 
 
