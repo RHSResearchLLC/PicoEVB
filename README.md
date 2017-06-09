@@ -11,7 +11,7 @@ and all necessary power supplies are built in. It will work in the following slo
  
 - M.2 2242 Key A
 - M.2 2242 Key E
-- Mini PCIe (mPCIe) via an adapter (here)
+- Full length mini PCIe via an adapter [like this one](https://www.amazon.com/dp/B01MR76H5F)
 
 ## Features
 - PCI Express connection to the host via M.2 edge slot
