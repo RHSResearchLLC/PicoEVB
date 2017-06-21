@@ -1,0 +1,317 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:42 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Apr 28 22:55:28 2017
+# Process ID: 5439
+# Current directory: /home/dr/Xilinx_proj/dma-1/xdma_0_ex
+# Command line: vivado -source /home/dr/Xilinx_proj/nanoEVB-1/.Xil/xdma_0/tmp_xdma_0.srcs/sources_1/ip/xdma_0/xdma_0_ex.tcl
+# Log file: /home/dr/Xilinx_proj/dma-1/xdma_0_ex/vivado.log
+# Journal file: /home/dr/Xilinx_proj/dma-1/xdma_0_ex/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source /home/dr/Xilinx_proj/nanoEVB-1/.Xil/xdma_0/tmp_xdma_0.srcs/sources_1/ip/xdma_0/xdma_0_ex.tcl
+# set srcIpDir "/home/dr/Xilinx_proj/nanoEVB-1/.Xil/xdma_0/tmp_xdma_0.srcs/sources_1/ip/xdma_0"
+# create_project -name xdma_0_ex -force
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip'.
+create_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 5824.402 ; gain = 83.301 ; free physical = 7260 ; free virtual = 21384
+# set_property part xc7a50tcsg325-1 [current_project]
+# set_property target_language verilog [current_project]
+# set_property simulator_language MIXED [current_project]
+# set projDir [get_property DIRECTORY [current_project]]
+# set importDir [file join $projDir imports]
+# file mkdir $importDir
+# set_property coreContainer.enable false [current_project]
+# set returnCode 0
+# import_ip -files [list [file join $srcIpDir xdma_0.xci]] -name xdma_0
+# reset_target {open_example} [get_ips xdma_0]
+# proc _filter_supported_targets {targets ip} {
+#   set res {}
+#   set all [get_property SUPPORTED_TARGETS $ip]
+#   foreach target $targets {
+#     lappend res {*}[lsearch -all -inline -nocase $all $target]
+#   }
+#   return $res
+# }
+# generate_target -quiet [_filter_supported_targets {instantiation_template synthesis simulation implementation shared_logic} [get_ips xdma_0]] [get_ips xdma_0]
+# add_files -scan_for_includes -quiet -copy_to $importDir -fileset [current_fileset] \
+#   [list [file join $srcIpDir xdma_0/example_design/xdma_app.v]] \
+#   [list [file join $srcIpDir xdma_0/example_design/xilinx_dma_pcie_ep.sv]]
+# set_property FILE_TYPE SystemVerilog [get_files [list [file join $importDir xilinx_dma_pcie_ep.sv]]]
+# add_files -quiet -copy_to $importDir -fileset [current_fileset -constrset] \
+#   [list [file join $srcIpDir example_design/xilinx_xdma_pcie_x0y0.xdc]]
+# if { [catch {current_fileset -simset} exc] } { create_fileset -simset sim_1 }
+# add_files -quiet -scan_for_includes -copy_to $importDir -fileset [current_fileset -simset] \
+#   [list [file join $srcIpDir xdma_0/simulation/functional/board_common.vh]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pci_exp_expect_tasks.vh]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pci_exp_usrapp_cfg.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pci_exp_usrapp_com.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pci_exp_usrapp_pl.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pci_exp_usrapp_rx.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pci_exp_usrapp_tx.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/functional/sys_clk_gen_ds.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/functional/sys_clk_gen.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pcie3_uscale_rp_core_top.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/pcie3_uscale_rp_top.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/dsport/xilinx_pcie_uscale_rp.v]] \
+#   [list [file join $srcIpDir xdma_0/simulation/tests/sample_tests.vh]] \
+#   [list [file join $srcIpDir xdma_0/simulation/tests/tests.vh]] \
+#   [list [file join $srcIpDir xdma_0/simulation/functional/board.v]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir board_common.vh]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pci_exp_expect_tasks.vh]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pci_exp_usrapp_cfg.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pci_exp_usrapp_com.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pci_exp_usrapp_pl.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pci_exp_usrapp_rx.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pci_exp_usrapp_tx.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir sys_clk_gen_ds.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir sys_clk_gen.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pcie3_uscale_rp_core_top.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir pcie3_uscale_rp_top.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir xilinx_pcie_uscale_rp.v]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir sample_tests.vh]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir tests.vh]]]
+# set_property USED_IN_SYNTHESIS false [get_files [list [file join $importDir board.v]]]
+# if { [catch {current_fileset -simset} exc] } { create_fileset -simset sim_1 }
+# add_files -quiet -copy_to $importDir -fileset [current_fileset -simset] \
+#   [list [file join $srcIpDir sim/demo_st2_bitfile.bin]]
+# set_property TOP [lindex [find_top] 0] [current_fileset]
+# if {[catch {source [file join $srcIpDir gen_ex_cores.tcl]} errMsg]} {
+#   puts "Error encountered while sourcing custom IP example design script."
+#   puts "$errorInfo"
+#   incr returnCode
+# }
+## get_files demo_st2_bitfile.bin
+INFO: [Device 21-403] Loading part xc7a50tcsg325-1
+create_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 6024.984 ; gain = 108.316 ; free physical = 6960 ; free virtual = 21189
+## list CONFIG.INTERFACE_TYPE {AXI4} CONFIG.Write_Width_A {64}
+## get_ips blk_mem_gen_1
+## get_ips *
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'blk_mem_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'blk_mem_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'blk_mem_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'blk_mem_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'blk_mem_gen_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'xdma_0'...
+# update_compile_order -fileset [current_fileset]
+# update_compile_order -fileset [current_fileset -simset]
+# set tops [list]
+# foreach tfile [ get_files -filter {name=~"*.xci" || name=~"*.bd"}] { if { [lsearch [list_property $tfile] PARENT_COMPOSITE_FILE ] == -1} {lappend tops $tfile} }
+# generate_target all $tops
+# export_ip_user_files -force
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/xsim/blk_mem_gen_1.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/xsim/summary.log'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Mentor Graphics ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/modelsim/blk_mem_gen_1.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/modelsim/summary.log'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/questa/blk_mem_gen_1.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/questa/summary.log'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "IES" (Cadence Incisive Enterprise Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/ies/blk_mem_gen_1.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/ies/summary.log'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/vcs/blk_mem_gen_1.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/vcs/summary.log'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/riviera/blk_mem_gen_1.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/riviera/summary.log'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Active-HDL Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/activehdl/blk_mem_gen_1.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/blk_mem_gen_1/activehdl/summary.log'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/xsim/xdma_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/xsim/sys_clk_gen_ps_v.txt'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "MODELSIM" (Mentor Graphics ModelSim Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/modelsim/xdma_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/modelsim/sys_clk_gen_ps_v.txt'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "QUESTA" (Mentor Graphics Questa Advanced Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/questa/xdma_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/questa/sys_clk_gen_ps_v.txt'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "IES" (Cadence Incisive Enterprise Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/ies/xdma_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/ies/sys_clk_gen_ps_v.txt'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "VCS" (Synopsys Verilog Compiler Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/vcs/xdma_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/vcs/sys_clk_gen_ps_v.txt'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "RIVIERA" (Aldec Riviera-PRO Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/riviera/xdma_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/riviera/sys_clk_gen_ps_v.txt'
+INFO: [exportsim-Tcl-35] Exporting simulation files for "ACTIVEHDL" (Aldec Active-HDL Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/activehdl/xdma_0.sh'
+INFO: [SIM-utils-43] Exported '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.ip_user_files/sim_scripts/xdma_0/activehdl/sys_clk_gen_ps_v.txt'
+export_ip_user_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 6024.988 ; gain = 0.000 ; free physical = 6925 ; free virtual = 21176
+# set dfile [file join $srcIpDir oepdone.txt]
+# if { [ catch { set doneFile [open $dfile w] } ] } {
+# } else { 
+#   puts $doneFile "Open Example Project DONE"
+#   close $doneFile
+# }
+# if { $returnCode != 0 } {
+#   error "Problems were encountered while executing the example design script, please review the log files."
+# }
+launch_runs synth_1 -jobs 4
+[Fri Apr 28 22:58:05 2017] Launched xdma_0_synth_1, blk_mem_gen_1_synth_1...
+Run output will be captured here:
+xdma_0_synth_1: /home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.runs/xdma_0_synth_1/runme.log
+blk_mem_gen_1_synth_1: /home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.runs/blk_mem_gen_1_synth_1/runme.log
+[Fri Apr 28 22:58:05 2017] Launched synth_1...
+Run output will be captured here: /home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a50tcsg325-1
+INFO: [Project 1-454] Reading design checkpoint '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.dcp' for cell 'xdma_0_i'
+INFO: [Project 1-454] Reading design checkpoint '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'xdma_app_i/blk_mem_xdma_inst'
+INFO: [Netlist 29-17] Analyzing 1000 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/WriteDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/WriteDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/ReadDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/ReadDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'xdma_0_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'xdma_0_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc]
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pl_received_hot_rst_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pl_received_hot_rst_cdc'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 480 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 22 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 439 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+
+open_run: Time (s): cpu = 00:00:59 ; elapsed = 00:00:40 . Memory (MB): peak = 6802.309 ; gain = 661.551 ; free physical = 6118 ; free virtual = 20489
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [HDL 9-2216] Analyzing SystemVerilog file "/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_dma_pcie_ep.sv" into library work [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_dma_pcie_ep.sv:1]
+[Fri Apr 28 23:13:48 2017] Launched synth_1...
+Run output will be captured here: /home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a50tcsg325-1
+INFO: [Project 1-454] Reading design checkpoint '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.dcp' for cell 'xdma_0_i'
+INFO: [Project 1-454] Reading design checkpoint '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'xdma_app_i/blk_mem_xdma_inst'
+INFO: [Netlist 29-17] Analyzing 1007 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/WriteDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/WriteDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/ReadDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/ReadDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'xdma_0_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'xdma_0_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc]
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pl_received_hot_rst_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pl_received_hot_rst_cdc'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 480 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 22 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 439 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+
+open_run: Time (s): cpu = 00:00:31 ; elapsed = 00:00:19 . Memory (MB): peak = 6837.914 ; gain = 35.605 ; free physical = 6065 ; free virtual = 20441
+set_property IOSTANDARD LVCMOS33 [get_ports [list sys_rst_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {status_leds[3]} {status_leds[2]} {status_leds[1]} {status_leds[0]}]]
+place_ports {status_leds[0]} V11
+place_ports {status_leds[1]} V12
+place_ports {status_leds[2]} V13
+place_ports {status_leds[3]} V14
+set_property offchip_term NONE [get_ports [list {status_leds[3]} {status_leds[2]} {status_leds[1]} {status_leds[0]}]]
+set_property PULLTYPE PULLUP [get_ports [list {status_leds[3]} {status_leds[2]} {status_leds[1]} {status_leds[0]}]]
+set_property drive 8 [get_ports [list {status_leds[3]} {status_leds[2]} {status_leds[1]} {status_leds[0]}]]
+place_ports sys_clk_p B6
+place_ports sys_rst_n U15
+set_property target_constrs_file /home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc [current_fileset -constrset]
+save_constraints -force
+close_design
+launch_runs impl_1 -jobs 4
+[Fri Apr 28 23:23:57 2017] Launched impl_1...
+Run output will be captured here: /home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a50tcsg325-1
+INFO: [Project 1-454] Reading design checkpoint '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.dcp' for cell 'xdma_0_i'
+INFO: [Project 1-454] Reading design checkpoint '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'xdma_app_i/blk_mem_xdma_inst'
+INFO: [Netlist 29-17] Analyzing 1007 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_0/source/xdma_0_pcie2_ip-PCIE_X0Y0.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/WriteDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/WriteDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/ReadDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_2/xdma_0_fifo_generator_64_parity_v7/xdma_0_fifo_generator_64_parity_v7.xdc] for cell 'xdma_0_i/inst/dma_top/axi4mm_axi_mm_mastertop_soft_dma_inst/ReadDataFifo/fifo_gen_64B_eccparity[0].u_fifo/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_3/pcie2_fifo_generator_dma_cpl/pcie2_fifo_generator_dma_cpl.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/dma_cpl_fifo_inst/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/ip_4/pcie2_fifo_generator_tgt_brdg/pcie2_fifo_generator_tgt_brdg.xdc] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/xdma_0_axi_stream_intf_i/xdma_0_rx_demux_i/tgt_brdg_fifo_inst/U0'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'xdma_0_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_board.xdc] for cell 'xdma_0_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/source/xdma_0_pcie3_7vx_ip.xdc] for cell 'xdma_0_i/inst'
+Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc]
+Finished Parsing XDC File [/home/dr/Xilinx_proj/dma-1/xdma_0_ex/imports/xilinx_xdma_pcie_x0y0.xdc]
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/phy_lnk_up_cdc'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pl_received_hot_rst_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/xdma_0_pcie2_to_pcie3_wrapper_i/pcie2_ip_i/inst/inst/pl_received_hot_rst_cdc'
+Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+Finished Sourcing Tcl File [/home/dr/Programs/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'xdma_0_i/inst/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 480 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 22 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 439 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+
+open_run: Time (s): cpu = 00:00:39 ; elapsed = 00:00:32 . Memory (MB): peak = 6881.340 ; gain = 43.426 ; free physical = 4734 ; free virtual = 19181
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 6881.340 ; gain = 0.000 ; free physical = 4725 ; free virtual = 19175
+report_utilization: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 6881.340 ; gain = 0.000 ; free physical = 4725 ; free virtual = 19175
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 28 23:32:12 2017...

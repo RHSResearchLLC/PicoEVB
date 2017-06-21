@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 26 23:07:47 2017" VIVADOVERSION="2016.4">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a50t" NAME="design_1" PACKAGE="csg325" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="RXD" SIGIS="undef" SIGNAME="External_Ports_RXD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="TXD"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="TXD" SIGIS="undef" SIGNAME="External_Ports_RXD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="RXD"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES/>
+
+</EDKSYSTEM>
