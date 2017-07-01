@@ -22,7 +22,27 @@ and all necessary power supplies are built in. It will work in the following slo
 
 ## Block Diagram
 
-![Block Diagram](./NanoEVB-X1-block.png)
+![NanoEVB Block Diagram](./NanoEVB-X1-block.png)
+
+# PicoEVB-X1
+
+![Image of PicoEVB](./PicoEVB-X1-top.png)
+
+The PicoEVB is a smaller version of the NanoEVB, shrunk to fit in a M.2 2230 slot.
+The external I/O connector and spare uart have been removed to allow the fit into the following slots:
+
+- M.2 2230 Key A
+- M.2 2230 Key E
+- Full length mini PCIe via an adapter [like this one](https://www.amazon.com/dp/B01MR76H5F)
+
+## Features
+- PCI Express connection to the host via M.2 edge slot
+- Built-in JTAG cable works with Vivado and Labtools
+
+## Block Diagram
+
+![PicoEVB Block Diagram](./PicoEVB-X1-block.png)
+
 
 ## More information
 
