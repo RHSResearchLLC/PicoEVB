@@ -1,13 +1,13 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
--- Date        : Fri Apr 28 23:10:17 2017
+-- Date        : Tue Jul 25 21:21:41 2017
 -- Host        : lt1 running 64-bit Ubuntu 17.04
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_stub.vhdl
+--               /home/dr/Git/RHSResearchLLC/NanoEVB-X1/Vivado/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/xdma_0/xdma_0_stub.vhdl
 -- Design      : xdma_0
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7a50tcsg325-1
+-- Device      : xc7a50tcsg325-2
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

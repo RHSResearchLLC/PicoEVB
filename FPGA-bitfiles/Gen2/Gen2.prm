@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               4M
+Start Address      0x00000000
+End Address        0x003FFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x00111413    Jul 25 21:30:07 2017    /home/dr/Git/RHSResearchLLC/NanoEVB-X1/Vivado/xdma_0_ex/xdma_0_ex.runs/impl_1/xilinx_dma_pcie_ep.bit

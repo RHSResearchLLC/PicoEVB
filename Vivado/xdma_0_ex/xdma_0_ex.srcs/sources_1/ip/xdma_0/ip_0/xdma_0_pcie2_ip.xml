@@ -2999,7 +2999,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>e2f82ca1</spirit:value>
+            <spirit:value>60c685c6</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3019,7 +3019,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 29 02:56:13 UTC 2017</spirit:value>
+            <spirit:value>Wed Jul 26 01:14:06 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3031,7 +3031,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>e2f82ca1</spirit:value>
+            <spirit:value>60c685c6</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3050,7 +3050,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 29 02:56:13 UTC 2017</spirit:value>
+            <spirit:value>Wed Jul 26 01:14:06 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3062,7 +3062,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>e2f82ca1</spirit:value>
+            <spirit:value>60c685c6</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3082,7 +3082,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 29 02:56:13 UTC 2017</spirit:value>
+            <spirit:value>Wed Jul 26 01:14:06 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3094,7 +3094,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>24e86760</spirit:value>
+            <spirit:value>c0d34cbc</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -3113,7 +3113,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Apr 29 02:56:13 UTC 2017</spirit:value>
+            <spirit:value>Wed Jul 26 01:14:06 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
@@ -3125,7 +3125,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>24e86760</spirit:value>
+            <spirit:value>c0d34cbc</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -9619,11 +9619,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>max_lnk_spd</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_lnk_spd">1</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_lnk_spd">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>c_gen1</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gen1">false</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_gen1">true</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>pci_exp_int_freq</spirit:name>
@@ -9671,7 +9671,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>dev_id</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.dev_id">7011</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.dev_id">7021</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>rev_id</spirit:name>
@@ -9807,7 +9807,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_trgt_lnk_spd</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_trgt_lnk_spd">0</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_trgt_lnk_spd">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>c_hw_auton_spd_disable</spirit:name>
@@ -10470,11 +10470,6 @@
       <spirit:enumeration>5</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_691692d1</spirit:name>
-      <spirit:enumeration>62.5</spirit:enumeration>
-      <spirit:enumeration>125</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_6f5507b7</spirit:name>
       <spirit:enumeration>None</spirit:enumeration>
     </spirit:choice>
@@ -10552,6 +10547,12 @@
     <spirit:choice>
       <spirit:name>choice_list_c3d223d9</spirit:name>
       <spirit:enumeration>Memory</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_ce4d0c9f</spirit:name>
+      <spirit:enumeration>62.5</spirit:enumeration>
+      <spirit:enumeration>125</spirit:enumeration>
+      <spirit:enumeration>250</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_d1e1a340</spirit:name>
@@ -10685,10 +10686,6 @@
       <spirit:enumeration spirit:text="Buffer Write and Read">Buffer_Write_and_Read</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_6da6ff29</spirit:name>
-      <spirit:enumeration spirit:text="2.5 GT/s">2.5_GT/s</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_pairs_77d6f5f3</spirit:name>
       <spirit:enumeration spirit:text="-6">dB:</spirit:enumeration>
       <spirit:enumeration spirit:text="0">-3.5</spirit:enumeration>
@@ -10741,6 +10738,11 @@
       <spirit:enumeration spirit:text="Ranges A, B &amp; C">Ranges_A,_B_&amp;_C</spirit:enumeration>
       <spirit:enumeration spirit:text="Ranges B, C &amp; D">Ranges_B,_C_&amp;_D</spirit:enumeration>
       <spirit:enumeration spirit:text="Ranges A, B, C &amp; D">Ranges_A,_B,_C_&amp;_D</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_d06c0498</spirit:name>
+      <spirit:enumeration spirit:text="2.5 GT/s">2.5_GT/s</spirit:enumeration>
+      <spirit:enumeration spirit:text="5.0 GT/s">5.0_GT/s</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_db58a2b2</spirit:name>
@@ -11215,7 +11217,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Link_Speed</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Link_Speed" spirit:choiceRef="choice_pairs_6da6ff29" spirit:order="104">2.5_GT/s</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Link_Speed" spirit:choiceRef="choice_pairs_d06c0498" spirit:order="104">5.0_GT/s</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Interface_Width</spirit:name>
@@ -11223,7 +11225,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>User_Clk_Freq</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.User_Clk_Freq" spirit:choiceRef="choice_list_691692d1" spirit:order="106">62.5</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.User_Clk_Freq" spirit:choiceRef="choice_list_ce4d0c9f" spirit:order="106">62.5</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Enabled</spirit:name>
@@ -11391,7 +11393,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Device_ID</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Device_ID" spirit:order="302">7011</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Device_ID" spirit:order="302">7021</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Revision_ID</spirit:name>
@@ -11487,7 +11489,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Trgt_Link_Speed</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Trgt_Link_Speed" spirit:choiceRef="choice_pairs_067d6dc7" spirit:order="513">4&apos;h1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Trgt_Link_Speed" spirit:choiceRef="choice_pairs_067d6dc7" spirit:order="513">4&apos;h2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Hw_Auton_Spd_Disable</spirit:name>

@@ -130,7 +130,7 @@ module xdma_0_pcie2_ip_pipe_clock #
                                            
     localparam          CLKOUT4_DIVIDE   = 20;
 
-    localparam          PCIE_GEN1_MODE    = 1'b1;             // PCIe link speed is GEN1 only
+    localparam          PCIE_GEN1_MODE    = 1'b0;             // PCIe link speed is GEN1 only
                                     
        
     //---------- Input Registers ---------------------------
@@ -151,7 +151,7 @@ module xdma_0_pcie2_ip_pipe_clock #
     wire                            userclk1;
     wire                            userclk2;
     wire                            oobclk;
-    (* dont_touch = "true" *)reg    pclk_sel = 1'd0;
+    reg    pclk_sel = 1'd0;
     reg                             pclk_sel_slave = 1'd0;
 
     //---------- Output Registers --------------------------

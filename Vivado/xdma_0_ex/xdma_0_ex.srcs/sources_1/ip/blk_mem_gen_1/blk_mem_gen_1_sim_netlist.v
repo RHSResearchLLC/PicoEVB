@@ -1,14 +1,14 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (lin64) Build 1733598 Wed Dec 14 22:35:42 MST 2016
-// Date        : Fri Apr 28 23:00:53 2017
+// Date        : Tue Jul 25 21:23:54 2017
 // Host        : lt1 running 64-bit Ubuntu 17.04
 // Command     : write_verilog -force -mode funcsim
-//               /home/dr/Xilinx_proj/dma-1/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_sim_netlist.v
+//               /home/dr/Git/RHSResearchLLC/NanoEVB-X1/Vivado/xdma_0_ex/xdma_0_ex.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_sim_netlist.v
 // Design      : blk_mem_gen_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a50tcsg325-1
+// Device      : xc7a50tcsg325-2
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 

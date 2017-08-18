@@ -189,7 +189,7 @@ module xdma_0_pcie2_ip_pipe_wrapper #
     parameter PCIE_CHAN_BOND                = 1,            // PCIe channel bonding mode
     parameter PCIE_CHAN_BOND_EN             = "TRUE",       // PCIe channel bonding enable for Gen1/Gen2 only
     parameter PCIE_LANE                     = 1,            // PCIe number of lanes
-    parameter PCIE_LINK_SPEED               = 1,            // PCIe link speed 
+    parameter PCIE_LINK_SPEED               = 2,            // PCIe link speed 
     parameter PCIE_REFCLK_FREQ              = 0,            // PCIe reference clock frequency
     parameter PCIE_USERCLK1_FREQ            = 2,            // PCIe user clock 1 frequency
     parameter PCIE_USERCLK2_FREQ            = 2,            // PCIe user clock 2 frequency
