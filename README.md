@@ -43,6 +43,9 @@ The external I/O connector and spare uart have been removed to allow the fit int
 
 ![PicoEVB Block Diagram](./PicoEVB-X1-block.png)
 
+## How to get one
+[Check us out on Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
+
 
 ## More information
 
