@@ -20,10 +20,6 @@ and all necessary power supplies are built in. It will work in the following slo
 - Analog/digital IO
 
 
-## Block Diagram
-
-![NanoEVB Block Diagram](./NanoEVB-X1-block.png)
-
 # PicoEVB-X1
 
 ![Image of PicoEVB](./PicoEVB-X1-top.png)
@@ -38,10 +34,11 @@ The external I/O connector and spare uart have been removed to allow the fit int
 ## Features
 - PCI Express connection to the host via M.2 edge slot
 - Built-in JTAG cable works with Vivado and Labtools
+- Analog/digital IO
 
 ## Block Diagram
 
-![PicoEVB Block Diagram](./PicoEVB-X1-block.png)
+![Block Diagram](./EVB-block-diagram.png)
 
 ## How to get one
 [Check us out on Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
