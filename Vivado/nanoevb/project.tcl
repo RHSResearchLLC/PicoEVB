@@ -83,7 +83,7 @@ set proj_dir [get_property directory [current_project]]
 set obj [get_projects nanoevb]
 set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
 set_property -name "ip_cache_permissions" -value "read write" -objects $obj
-set_property -name "ip_output_repo" -value "$proj_dir/nanoevb.cache/ip" -objects $obj
+set_property -name "ip_output_repo" -value "$origin_dir/../ipcache" -objects $obj
 set_property -name "part" -value "xc7a50tcsg325-2" -objects $obj
 set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
 set_property -name "simulator_language" -value "Mixed" -objects $obj

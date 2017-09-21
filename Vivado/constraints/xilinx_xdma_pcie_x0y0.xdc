@@ -120,7 +120,6 @@ set_property CFGBVS GND [current_design]
 # Please refer to the Virtex-7 GT Transceiver User Guide
 # (UG) for guidelines regarding clock resource selection.
 #
-set_property LOC IBUFDS_GTE2_X0Y1 [get_cells refclk_ibuf]
 set_property PACKAGE_PIN B6 [get_ports sys_clk_p]
 
 ###############################################################################

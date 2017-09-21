@@ -35,7 +35,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 ################################################################
 
 # To test this script, run the following commands from Vivado Tcl console:
-# source design_1_script.tcl
+# source project_bd_script.tcl
 
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
@@ -160,8 +160,9 @@ CONFIG.FREQ_HZ {100000000} \
  ] $sys
 
   # Create ports
-  set RXD [ create_bd_port -dir I RXD ]
-  set TXD [ create_bd_port -dir O TXD ]
+  set RxD [ create_bd_port -dir I RxD ]
+  set TxD [ create_bd_port -dir O TxD ]
+  set clkreq_l [ create_bd_port -dir O -from 0 -to 0 -type data clkreq_l ]
   set status_leds [ create_bd_port -dir O -from 3 -to 0 status_leds ]
   set sys_rst_n [ create_bd_port -dir I -type rst sys_rst_n ]
   set_property -dict [ list \
@@ -196,12 +197,18 @@ CONFIG.Output_Width {26} \
 CONFIG.Restrict_Count {false} \
  ] $c_counter_binary_0
 
-  # Create instance: deadbeef, and set properties
-  set deadbeef [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 deadbeef ]
+  # Create instance: clkreq_l_tieoff, and set properties
+  set clkreq_l_tieoff [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 clkreq_l_tieoff ]
+  set_property -dict [ list \
+CONFIG.CONST_VAL {0} \
+ ] $clkreq_l_tieoff
+
+  # Create instance: deadbeef_constant, and set properties
+  set deadbeef_constant [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 deadbeef_constant ]
   set_property -dict [ list \
 CONFIG.CONST_VAL {0xdeadbeef} \
 CONFIG.CONST_WIDTH {32} \
- ] $deadbeef
+ ] $deadbeef_constant
 
   # Create instance: util_ds_buf, and set properties
   set util_ds_buf [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf ]
@@ -250,7 +257,7 @@ CONFIG.DOUT_WIDTH {1} \
   connect_bd_intf_net -intf_net xdma_0_pcie_mgt [get_bd_intf_ports pcie_7x_mgt_rtl] [get_bd_intf_pins xdma_0/pcie_mgt]
 
   # Create port connections
-  connect_bd_net -net RXD_1 [get_bd_ports RXD] [get_bd_ports TXD]
+  connect_bd_net -net RXD_1 [get_bd_ports RxD] [get_bd_ports TxD]
   connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins xlslice_0/Din]
   connect_bd_net -net reset_rtl_1 [get_bd_ports sys_rst_n] [get_bd_pins xdma_0/sys_rst_n] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net util_ds_buf_IBUF_OUT [get_bd_pins util_ds_buf/IBUF_OUT] [get_bd_pins xdma_0/sys_clk]
@@ -258,7 +265,8 @@ CONFIG.DOUT_WIDTH {1} \
   connect_bd_net -net xdma_0_axi_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins xdma_0/axi_aresetn] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net xdma_0_user_lnk_up [get_bd_pins xdma_0/user_lnk_up] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net xlconcat_0_dout [get_bd_ports status_leds] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins deadbeef/dout]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins deadbeef_constant/dout]
+  connect_bd_net -net xlconstant_0_dout1 [get_bd_ports clkreq_l] [get_bd_pins clkreq_l_tieoff/dout]
   connect_bd_net -net xlslice_0_Dout [get_bd_pins xlconcat_0/In3] [get_bd_pins xlslice_0/Dout]
 
   # Create address segments
