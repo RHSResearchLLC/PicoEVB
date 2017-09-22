@@ -1,2 +1,5 @@
-Vivado/xdma_0_ex/xdma_0_ex.runs
-Vivado/xdma_0_ex/xdma_0_ex.cache
+# Project itself is created in workspace and should not be submitted
+Vivado/nanoevb/nanoevb
+
+# ipcache is a timesaver, but too large for source control
+Vivado/ipcache
