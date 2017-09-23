@@ -153,7 +153,7 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set pcie_7x_mgt_rtl [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:pcie_7x_mgt_rtl:1.0 pcie_7x_mgt_rtl ]
+  set pcie_mgt [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:pcie_7x_mgt_rtl:1.0 pcie_mgt ]
   set sys [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 sys ]
   set_property -dict [ list \
 CONFIG.FREQ_HZ {100000000} \
@@ -162,6 +162,7 @@ CONFIG.FREQ_HZ {100000000} \
   # Create ports
   set RxD [ create_bd_port -dir I RxD ]
   set TxD [ create_bd_port -dir O TxD ]
+  set auxio [ create_bd_port -dir I -from 3 -to 0 auxio ]
   set clkreq_l [ create_bd_port -dir O -from 0 -to 0 -type data clkreq_l ]
   set status_leds [ create_bd_port -dir O -from 3 -to 0 status_leds ]
   set sys_rst_n [ create_bd_port -dir I -type rst sys_rst_n ]
@@ -186,8 +187,9 @@ CONFIG.Memory_Type {True_Dual_Port_RAM} \
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
 CONFIG.C_ALL_INPUTS {1} \
-CONFIG.C_ALL_INPUTS_2 {0} \
-CONFIG.C_IS_DUAL {0} \
+CONFIG.C_ALL_INPUTS_2 {1} \
+CONFIG.C_GPIO2_WIDTH {4} \
+CONFIG.C_IS_DUAL {1} \
  ] $axi_gpio_0
 
   # Create instance: c_counter_binary_0, and set properties
@@ -254,10 +256,11 @@ CONFIG.DOUT_WIDTH {1} \
   connect_bd_intf_net -intf_net diff_clock_rtl_1 [get_bd_intf_ports sys] [get_bd_intf_pins util_ds_buf/CLK_IN_D]
   connect_bd_intf_net -intf_net xdma_0_M_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins xdma_0/M_AXI]
   connect_bd_intf_net -intf_net xdma_0_M_AXI_LITE [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins xdma_0/M_AXI_LITE]
-  connect_bd_intf_net -intf_net xdma_0_pcie_mgt [get_bd_intf_ports pcie_7x_mgt_rtl] [get_bd_intf_pins xdma_0/pcie_mgt]
+  connect_bd_intf_net -intf_net xdma_0_pcie_mgt [get_bd_intf_ports pcie_mgt] [get_bd_intf_pins xdma_0/pcie_mgt]
 
   # Create port connections
   connect_bd_net -net RXD_1 [get_bd_ports RxD] [get_bd_ports TxD]
+  connect_bd_net -net auxio_1 [get_bd_ports auxio] [get_bd_pins axi_gpio_0/gpio2_io_i]
   connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins xlslice_0/Din]
   connect_bd_net -net reset_rtl_1 [get_bd_ports sys_rst_n] [get_bd_pins xdma_0/sys_rst_n] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net util_ds_buf_IBUF_OUT [get_bd_pins util_ds_buf/IBUF_OUT] [get_bd_pins xdma_0/sys_clk]
