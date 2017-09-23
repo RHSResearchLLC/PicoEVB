@@ -16,8 +16,8 @@ and all necessary power supplies are built in. It will work in the following slo
 ## Features
 - PCI Express connection to the host via M.2 edge slot
 - Built-in JTAG cable works with Vivado and Labtools
-- RS232 connection to the FPGA via FT2232
 - Analog/digital IO
+- Spare UART RS232 connection to the FPGA via FT2232
 
 
 # PicoEVB-X1
@@ -25,7 +25,7 @@ and all necessary power supplies are built in. It will work in the following slo
 ![Image of PicoEVB](./PicoEVB-X1-top.png)
 
 The PicoEVB is a smaller version of the NanoEVB, shrunk to fit in a M.2 2230 slot.
-The external I/O connector and spare uart have been removed to allow the fit into the following slots:
+The spare uart has been removed to allow the fit into the following slots:
 
 - M.2 2230 Key A
 - M.2 2230 Key E
@@ -39,6 +39,9 @@ The external I/O connector and spare uart have been removed to allow the fit int
 ## Block Diagram
 
 ![Block Diagram](./EVB-block-diagram.png)
+
+Note that the I/O connector pinout is identical for NanoEVB & PicoEVB; they are 
+interchangeable- you can even use the same exact bitstream.
 
 ## How to get one
 [Check us out on Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
