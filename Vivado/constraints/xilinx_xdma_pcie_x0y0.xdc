@@ -55,11 +55,11 @@
 ###############################################################################
 # User Configuration
 # Link Width   - x1
-# Link Speed   - gen1
+# Link Speed   - gen2
 # Family       - artix7
 # Part         - xc7a50t
 # Package      - csg325
-# Speed grade  - -1
+# Speed grade  - -2
 # PCIe Block   - X0Y0
 ###############################################################################
 #
@@ -106,8 +106,8 @@
 set_property IOSTANDARD LVCMOS33 [get_ports sys_rst_n]
 set_property PULLUP true [get_ports sys_rst_n]
 
-set_property CONFIG_VOLTAGE 1.8 [current_design]
-set_property CFGBVS GND [current_design]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property CFGBVS VCCO [current_design]
 
 #
 #
