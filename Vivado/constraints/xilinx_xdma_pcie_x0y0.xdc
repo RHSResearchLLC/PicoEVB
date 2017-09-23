@@ -62,65 +62,35 @@
 # Speed grade  - -2
 # PCIe Block   - X0Y0
 ###############################################################################
-#
-#########################################################################################################################
-# User Constraints
-#########################################################################################################################
 
-###############################################################################
-# User Time Names / User Time Groups / Time Specs
-###############################################################################
-
-###############################################################################
-# User Physical Constraints
-###############################################################################
-
-#########################################################################################################################
-# End User Constraints
-#########################################################################################################################
-#
-#
-#
 #########################################################################################################################
 # PCIE Core Constraints
 #########################################################################################################################
 
-
 ###############################################################################
 # Pinout and Related I/O Constraints
 ###############################################################################
-#
-# SYS reset (input) signal.  The sys_reset_n signal should be
-# obtained from the PCI Express interface if possible.  For
-# slot based form factors, a system reset signal is usually
-# present on the connector.  For cable based form factors, a
-# system reset signal may not be available.  In this case, the
-# system reset signal must be generated locally by some form of
-# supervisory circuit.  You may change the IOSTANDARD and LOC
-# to suit your requirements and VCCO voltage banking rules.
-# Some 7 series devices do not have 3.3 V I/Os available.
-# Therefore the appropriate level shift is required to operate
-# with these devices that contain only 1.8 V banks.
-#
-
+# SYS reset (input) signal.  The sys_reset_n signal is generated
+# by the PCI Express interface (PERST#).
+set_property PACKAGE_PIN A10 [get_ports sys_rst_n]
 set_property IOSTANDARD LVCMOS33 [get_ports sys_rst_n]
 set_property PULLUP true [get_ports sys_rst_n]
 
-set_property CONFIG_VOLTAGE 3.3 [current_design]
-set_property CFGBVS VCCO [current_design]
-
-#
-#
-# SYS clock 0 MHz (input) signal. The sys_clk_p and sys_clk_n
-# signals are the PCI Express reference clock. Virtex-7 GT
-# Transceiver architecture requires the use of a dedicated clock
-# resources (FPGA input pins) associated with each GT Transceiver.
-# To use these pins an IBUFDS primitive (refclk_ibuf) is
-# instantiated in user's design.
-# Please refer to the Virtex-7 GT Transceiver User Guide
-# (UG) for guidelines regarding clock resource selection.
-#
+# SYS clock 100 MHz (input) signal. The sys_clk_p and sys_clk_n
+# signals are the PCI Express reference clock. 
 set_property PACKAGE_PIN B6 [get_ports sys_clk_p]
+
+# PCIe x1 link
+set_property PACKAGE_PIN G4 [get_ports pcie_mgt_rxp]
+set_property PACKAGE_PIN G3 [get_ports pcie_mgt_rxn]
+set_property PACKAGE_PIN B2 [get_ports pcie_mgt_txp]
+set_property PACKAGE_PIN B1 [get_ports pcie_mgt_txn]
+
+# MGT Loopback
+#set_property PACKAGE_PIN C4 [get_ports loop_mgt_rxp]
+#set_property PACKAGE_PIN C3 [get_ports loop_mgt_rxn]
+#set_property PACKAGE_PIN D2 [get_ports loop_mgt_txp]
+#set_property PACKAGE_PIN D1 [get_ports loop_mgt_txn]
 
 ###############################################################################
 # Timing Constraints
@@ -132,19 +102,26 @@ create_clock -period 10.000 -name sys_clk [get_ports sys_clk_p]
 # Physical Constraints
 ###############################################################################
 
+# Input reset is resynchronized within FPGA design as necessary
 set_false_path -from [get_ports sys_rst_n]
 
 #########################################################################################################################
 # End PCIe Core Constraints
 #########################################################################################################################
 
+
+###############################################################################
+# NanoEVB, PicoEVB I/O
+###############################################################################
+
+set_property PACKAGE_PIN V14 [get_ports {status_leds[3]}]
+set_property PACKAGE_PIN V13 [get_ports {status_leds[2]}]
+set_property PACKAGE_PIN V11 [get_ports {status_leds[1]}]
+set_property PACKAGE_PIN V12 [get_ports {status_leds[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[0]}]
-set_property PACKAGE_PIN V12 [get_ports {status_leds[0]}]
-set_property PACKAGE_PIN V13 [get_ports {status_leds[2]}]
-set_property PACKAGE_PIN V14 [get_ports {status_leds[3]}]
 set_property PULLUP true [get_ports {status_leds[3]}]
 set_property PULLUP true [get_ports {status_leds[2]}]
 set_property PULLUP true [get_ports {status_leds[1]}]
@@ -153,11 +130,44 @@ set_property DRIVE 8 [get_ports {status_leds[3]}]
 set_property DRIVE 8 [get_ports {status_leds[2]}]
 set_property DRIVE 8 [get_ports {status_leds[1]}]
 set_property DRIVE 8 [get_ports {status_leds[0]}]
-set_property PACKAGE_PIN A10 [get_ports sys_rst_n]
 
+# clkreq_l is active low clock request for M.2 card to
+# request PCI Express reference clock
 set_property PACKAGE_PIN A9 [get_ports clkreq_l]
 set_property IOSTANDARD LVCMOS33 [get_ports clkreq_l]
 set_property PULLDOWN true [get_ports clkreq_l]
+
+# Auxillary I/O Connector
+# auxio[0] - conn pin 1
+# auxio[1] - conn pin 2
+# auxio[2] - conn pin 4
+# auxio[3] - conn pin 5
+# Note: These I/O may be re-purposed to use with XADC as analog inputs
+set_property PACKAGE_PIN A14 [get_ports auxio[0]]
+set_property PACKAGE_PIN A13 [get_ports auxio[1]]
+set_property PACKAGE_PIN B12 [get_ports auxio[2]]
+set_property PACKAGE_PIN A12 [get_ports auxio[3]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio[3]]
+
+###############################################################################
+# NanoEVB I/O
+###############################################################################
+# Serial input/output
+# Available on NanoEVB only!
+set_property IOSTANDARD LVCMOS33 [get_ports RxD]
+set_property IOSTANDARD LVCMOS33 [get_ports TxD]
+set_property PACKAGE_PIN V17 [get_ports RxD]
+set_property PACKAGE_PIN V16 [get_ports TxD]
+set_property PULLUP true [get_ports RxD]
+set_property OFFCHIP_TERM NONE [get_ports TxD]
+
+
+###############################################################################
+# Additional design / project settings
+###############################################################################
 
 # High-speed configuration so FPGA is up in time to negotiate with PCIe root complex
 set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
@@ -166,11 +176,5 @@ set_property CONFIG_MODE SPIx4 [current_design]
 set_property BITSTREAM.CONFIG.SPI_FALL_EDGE YES [current_design]
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
-set_property PACKAGE_PIN V11 [get_ports {status_leds[1]}]
-
-set_property OFFCHIP_TERM NONE [get_ports TxD]
-set_property IOSTANDARD LVCMOS33 [get_ports RxD]
-set_property PACKAGE_PIN V17 [get_ports RxD]
-set_property PACKAGE_PIN V16 [get_ports TxD]
-set_property IOSTANDARD LVCMOS33 [get_ports TxD]
-set_property PULLUP true [get_ports RxD]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property CFGBVS VCCO [current_design]
