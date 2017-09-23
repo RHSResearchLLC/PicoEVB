@@ -23,7 +23,7 @@ install: all
 clean:
 	rm -rf *.o *.o.d *~ core .depend .*.cmd *.ko *.ko.unsigned *.mod.c .tmp_versions *.symvers .#* *.save *.bak Modules.* modules.order Module.markers *.bin
 
-CFLAGS_xdma-core.o := -Wall -DDEBUG $(XILINXINCLUDE) -DXDMA_NEW_AIO
+CFLAGS_xdma-core.o := -Wall -DDEBUG $(XILINXINCLUDE)
 
 ifeq ($(GCC49),1)
 	CFLAGS_xdma-core.o += -Wno-error=date-time

@@ -165,9 +165,7 @@ static int test_dma(char *devicename, uint32_t addr, uint32_t size, uint32_t off
     file_fd = open(filename, O_RDONLY);
     assert(file_fd >= 0);
   }
-
-  while (count--) {
-    /* fill the buffer with data from file? */
+  /* fill the buffer with data from file? */
     if (file_fd >= 0) {
       /* read data from file into memory buffer */
       rc = read(file_fd, buffer, size);
@@ -176,6 +174,8 @@ static int test_dma(char *devicename, uint32_t addr, uint32_t size, uint32_t off
     }
     /* select AXI MM address */
     off_t off = lseek(fpga_fd, addr, SEEK_SET);
+  while (count--) {
+  
     rc = clock_gettime(CLOCK_MONOTONIC, &ts_start);
     /* write buffer to AXI MM address using SGDMA */
     rc = write(fpga_fd, buffer, size);
@@ -194,3 +194,4 @@ static int test_dma(char *devicename, uint32_t addr, uint32_t size, uint32_t off
   }
   free(allocated);
 }
+

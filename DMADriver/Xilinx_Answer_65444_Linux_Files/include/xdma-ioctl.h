@@ -104,3 +104,4 @@ struct xdma_performance_ioctl
 #define IOCTL_XDMA_ALIGN_GET	_IOR('q', 6, int)
 
 #endif /* _XDMA_IOCALLS_POSIX_H_ */
+

@@ -18,6 +18,7 @@
 
 static int verbosity = 0;
 static int read_back = 0;
+static int no_write = 0;
 static int allowed_accesses = 1;
 
 static struct option const long_opts[] =
@@ -77,7 +78,7 @@ int main(int argc, char* argv[])
   uint32_t count = COUNT_DEFAULT;
   char *filename = NULL;
 
-  while ((cmd_opt = getopt_long(argc, argv, "vhc:f:d:a:s:o:", long_opts, NULL)) != -1)
+  while ((cmd_opt = getopt_long(argc, argv, "vhxc:f:d:a:s:o:", long_opts, NULL)) != -1)
   {
     switch (cmd_opt)
     {
@@ -109,6 +110,10 @@ int main(int argc, char* argv[])
       /* count */
       case 'f':
         filename = strdup(optarg);
+        break;
+      /* No write to file */
+      case 'x':
+        no_write++;
         break;
       /* print usage help and exit */
       case 'h':
@@ -168,19 +173,19 @@ static int test_dma(char *devicename, uint32_t addr, uint32_t size, uint32_t off
     assert(file_fd >= 0);
   }
 
-  rc = clock_gettime(CLOCK_MONOTONIC, &ts_end);
   while (count--) {
+    memset(buffer, 0x00, size);
     /* select AXI MM address */
     off_t off = lseek(fpga_fd, addr, SEEK_SET);
     rc = clock_gettime(CLOCK_MONOTONIC, &ts_start);
     /* read data from AXI MM into buffer using SGDMA */
     rc = read(fpga_fd, buffer, size);
-    clock_gettime(CLOCK_MONOTONIC, &ts_end);
     if ((rc > 0) && (rc < size)) {
       printf("Short read of %d bytes into a %d bytes buffer, could be a packet read?\n", rc, size);
     }
+    rc = clock_gettime(CLOCK_MONOTONIC, &ts_end);
     /* file argument given? */
-    if (file_fd >= 0) {
+    if ((file_fd >= 0) & (no_write == 0)) {
       /* write buffer to file */
       rc = write(file_fd, buffer, size);
       assert(rc == size);
@@ -197,3 +202,4 @@ static int test_dma(char *devicename, uint32_t addr, uint32_t size, uint32_t off
   }
   free(allocated);
 }
+

@@ -159,6 +159,7 @@
 #define H2C_CHANNEL_OFFSET 0x1000
 #define SGDMA_OFFSET_FROM_CHANNEL 0x4000
 #define CHANNEL_SPACING 0x100
+#define TARGET_SPACING 0x1000
 
 #define BYPASS_MODE_SPACING 0x0100
 
@@ -321,6 +322,7 @@ struct engine_sgdma_regs {
 	u32 first_desc_hi;
 	/* number of adjacent descriptors at first_desc */
 	u32 first_desc_adjacent;
+	u32 credits;
 } __packed;
 
 struct msix_vec_table_entry {
@@ -365,6 +367,11 @@ struct interrupt_regs {
 
 	u32 user_msi_vector[8];
 	u32 channel_msi_vector[8];
+} __packed;
+
+struct sgdma_common_regs {
+	u32 padding[9];
+	u32 credit_feature_enable;
 } __packed;
 
 /**
@@ -482,6 +489,7 @@ struct xdma_engine {
 	struct xdma_performance_ioctl *xdma_perf;	/* perf test control */
 	wait_queue_head_t xdma_perf_wq;			/* Perf test sync */
 	u8 eop_found; /* used only for cyclic(rx:c2h) */
+	u32 user_buffer_index;
 };
 
 struct xdma_ocl_clockwiz {
@@ -551,6 +559,7 @@ struct xdma_dev {
 	int irq_line;		/* flag if irq allocated successfully */
 	int msi_enabled;	/* flag if msi was enabled for the device */
 	int msix_enabled;	/* flag if msi-x was enabled for the device */
+	int irq_user_count;	/* user interrupt count */     
 	struct msix_entry entry[32];	/* msi-x vector/entry table */
 	struct xdma_irq user_irq[16];	/* user IRQ management */
 
