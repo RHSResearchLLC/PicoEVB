@@ -36,7 +36,7 @@ and all necessary power supplies are built in. It will work in the following slo
 
 ## Block Diagram
 
-![Block Diagram](./EVB-block-diagram.png)
+![Block Diagram](./BD-PicoEVB-RevB.png)
 
 ## How to get one
 [Check us out on Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
@@ -49,6 +49,9 @@ or contact info@nanoevb.com
 
 Note: If you are looking for NanoEVB, it has been discontinued. The 2242 form factor 
 of NanoEVB is rare, and the I/O connector has been added to PicoEVB, making NanoEVB redundant.
+
+![pic](./PicoEVB-with-quarter.jpg)
+
 
 
 
