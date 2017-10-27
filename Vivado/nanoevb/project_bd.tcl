@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2017.2
+set scripts_vivado_version 2017.3
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -48,6 +48,7 @@ if { $list_projs eq "" } {
 
 
 # CHANGE DESIGN NAME HERE
+variable design_name
 set design_name project_bd
 
 # If you do not already have an existing IP Integrator design open,
@@ -115,6 +116,46 @@ if { $nRet != 0 } {
    return $nRet
 }
 
+set bCheckIPsPassed 1
+##################################################################
+# CHECK IPs
+##################################################################
+set bCheckIPs 1
+if { $bCheckIPs == 1 } {
+   set list_check_ips "\ 
+xilinx.com:ip:axi_bram_ctrl:4.0\
+xilinx.com:ip:blk_mem_gen:8.4\
+xilinx.com:ip:axi_gpio:2.0\
+xilinx.com:ip:c_counter_binary:12.0\
+xilinx.com:ip:xlconstant:1.1\
+xilinx.com:ip:util_ds_buf:2.1\
+xilinx.com:ip:xdma:4.0\
+xilinx.com:ip:xlconcat:2.1\
+xilinx.com:ip:xlslice:1.0\
+"
+
+   set list_ips_missing ""
+   common::send_msg_id "BD_TCL-006" "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+
+   foreach ip_vlnv $list_check_ips {
+      set ip_obj [get_ipdefs -all $ip_vlnv]
+      if { $ip_obj eq "" } {
+         lappend list_ips_missing $ip_vlnv
+      }
+   }
+
+   if { $list_ips_missing ne "" } {
+      catch {common::send_msg_id "BD_TCL-115" "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+      set bCheckIPsPassed 0
+   }
+
+}
+
+if { $bCheckIPsPassed != 1 } {
+  common::send_msg_id "BD_TCL-1003" "WARNING" "Will not continue with creation of design due to the error(s) above."
+  return 3
+}
+
 ##################################################################
 # DESIGN PROCs
 ##################################################################
@@ -126,6 +167,7 @@ if { $nRet != 0 } {
 proc create_root_design { parentCell } {
 
   variable script_folder
+  variable design_name
 
   if { $parentCell eq "" } {
      set parentCell [get_bd_cells /]
@@ -156,8 +198,8 @@ proc create_root_design { parentCell } {
   set pcie_mgt [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:pcie_7x_mgt_rtl:1.0 pcie_mgt ]
   set sys [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 sys ]
   set_property -dict [ list \
-CONFIG.FREQ_HZ {100000000} \
- ] $sys
+   CONFIG.FREQ_HZ {100000000} \
+   ] $sys
 
   # Create ports
   set RxD [ create_bd_port -dir I RxD ]
@@ -167,87 +209,97 @@ CONFIG.FREQ_HZ {100000000} \
   set status_leds [ create_bd_port -dir O -from 3 -to 0 status_leds ]
   set sys_rst_n [ create_bd_port -dir I -type rst sys_rst_n ]
   set_property -dict [ list \
-CONFIG.POLARITY {ACTIVE_LOW} \
+   CONFIG.POLARITY {ACTIVE_LOW} \
  ] $sys_rst_n
 
   # Create instance: axi_bram_ctrl_0, and set properties
   set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 axi_bram_ctrl_0 ]
   set_property -dict [ list \
-CONFIG.DATA_WIDTH {64} \
-CONFIG.ECC_TYPE {0} \
+   CONFIG.C_SELECT_XPM {0} \
+   CONFIG.DATA_WIDTH {64} \
+   CONFIG.ECC_TYPE {0} \
  ] $axi_bram_ctrl_0
 
   # Create instance: axi_bram_ctrl_0_bram, and set properties
-  set axi_bram_ctrl_0_bram [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 axi_bram_ctrl_0_bram ]
+  set axi_bram_ctrl_0_bram [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 axi_bram_ctrl_0_bram ]
   set_property -dict [ list \
-CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_B {Use_ENB_Pin} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Port_B_Clock {100} \
+   CONFIG.Port_B_Enable_Rate {100} \
+   CONFIG.Port_B_Write_Rate {50} \
+   CONFIG.Use_RSTB_Pin {true} \
  ] $axi_bram_ctrl_0_bram
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
-CONFIG.C_ALL_INPUTS {1} \
-CONFIG.C_ALL_INPUTS_2 {1} \
-CONFIG.C_GPIO2_WIDTH {4} \
-CONFIG.C_IS_DUAL {1} \
+   CONFIG.C_ALL_INPUTS {1} \
+   CONFIG.C_ALL_INPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {4} \
+   CONFIG.C_IS_DUAL {1} \
  ] $axi_gpio_0
 
   # Create instance: c_counter_binary_0, and set properties
   set c_counter_binary_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:c_counter_binary:12.0 c_counter_binary_0 ]
   set_property -dict [ list \
-CONFIG.Output_Width {26} \
-CONFIG.Restrict_Count {false} \
+   CONFIG.Output_Width {26} \
+   CONFIG.Restrict_Count {false} \
  ] $c_counter_binary_0
 
   # Create instance: clkreq_l_tieoff, and set properties
   set clkreq_l_tieoff [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 clkreq_l_tieoff ]
   set_property -dict [ list \
-CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_VAL {0} \
  ] $clkreq_l_tieoff
 
   # Create instance: deadbeef_constant, and set properties
   set deadbeef_constant [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 deadbeef_constant ]
   set_property -dict [ list \
-CONFIG.CONST_VAL {0xdeadbeef} \
-CONFIG.CONST_WIDTH {32} \
+   CONFIG.CONST_VAL {0xdeadbeef} \
+   CONFIG.CONST_WIDTH {32} \
  ] $deadbeef_constant
 
   # Create instance: util_ds_buf, and set properties
   set util_ds_buf [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf ]
   set_property -dict [ list \
-CONFIG.C_BUF_TYPE {IBUFDSGTE} \
+   CONFIG.C_BUF_TYPE {IBUFDSGTE} \
  ] $util_ds_buf
 
   # Create instance: xdma_0, and set properties
-  set xdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xdma:3.1 xdma_0 ]
+  set xdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xdma:4.0 xdma_0 ]
   set_property -dict [ list \
-CONFIG.axi_data_width {64_bit} \
-CONFIG.axil_master_64bit_en {true} \
-CONFIG.axilite_master_en {true} \
-CONFIG.axisten_freq {125} \
-CONFIG.cfg_mgmt_if {false} \
-CONFIG.pciebar2axibar_axil_master {0x0000000040000000} \
-CONFIG.pciebar2axibar_axist_bypass {0x0000000000000000} \
-CONFIG.pf0_msix_cap_pba_bir {BAR_3:2} \
-CONFIG.pf0_msix_cap_table_bir {BAR_3:2} \
-CONFIG.pl_link_cap_max_link_speed {5.0_GT/s} \
-CONFIG.xdma_axi_intf_mm {AXI_Memory_Mapped} \
-CONFIG.xdma_pcie_64bit_en {true} \
+   CONFIG.axi_data_width {64_bit} \
+   CONFIG.axil_master_64bit_en {true} \
+   CONFIG.axilite_master_en {true} \
+   CONFIG.axisten_freq {125} \
+   CONFIG.barlite2 {0} \
+   CONFIG.cfg_mgmt_if {false} \
+   CONFIG.pciebar2axibar_axil_master {0x0000000040000000} \
+   CONFIG.pciebar2axibar_axist_bypass {0x0000000000000000} \
+   CONFIG.pf0_device_id {7021} \
+   CONFIG.pf0_msix_cap_pba_bir {BAR_3:2} \
+   CONFIG.pf0_msix_cap_table_bir {BAR_3:2} \
+   CONFIG.pl_link_cap_max_link_speed {5.0_GT/s} \
+   CONFIG.plltype {QPLL1} \
+   CONFIG.xdma_axi_intf_mm {AXI_Memory_Mapped} \
+   CONFIG.xdma_pcie_64bit_en {true} \
  ] $xdma_0
 
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
   set_property -dict [ list \
-CONFIG.NUM_PORTS {4} \
+   CONFIG.NUM_PORTS {4} \
  ] $xlconcat_0
 
   # Create instance: xlslice_0, and set properties
   set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
   set_property -dict [ list \
-CONFIG.DIN_FROM {25} \
-CONFIG.DIN_TO {25} \
-CONFIG.DIN_WIDTH {26} \
-CONFIG.DOUT_WIDTH {1} \
+   CONFIG.DIN_FROM {25} \
+   CONFIG.DIN_TO {25} \
+   CONFIG.DIN_WIDTH {26} \
+   CONFIG.DOUT_WIDTH {1} \
  ] $xlslice_0
 
   # Create interface connections
