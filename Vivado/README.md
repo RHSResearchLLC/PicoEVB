@@ -24,15 +24,9 @@ using TCL script.
 ### PROM file for onboard flash
 Once the bitstream is generated, in the Vivado TCL command prompt, from the Vivado/nanoevb project directory run the following command:
 
-    write_cfgmem  -format mcs -size 4 -interface SPIx4 \
+    write_cfgmem -force -format mcs -size 4 -interface SPIx4 \
     -loadbit {up 0x00000000 "./nanoevb/nanoevb.runs/impl_1/project_bd_wrapper.bit" } \
     -file "../../FPGA-bitfiles/Gen2/Gen2.mcs"
-
-    write_cfgmem  -format mcs -disablebitswap -size 4 -interface SPIx4 \
-    -loadbit {up 0x00000000 "./nanoevb/nanoevb.runs/impl_1/project_bd_wrapper.bit" } \
-    -file "../../FPGA-bitfiles/Gen2/Gen2-NOSWAP.mcs"
-
-
 
 
 ### Project / upgrade info
