@@ -26,7 +26,13 @@ Once the bitstream is generated, in the Vivado TCL command prompt, from the Viva
 
     write_cfgmem  -format mcs -size 4 -interface SPIx4 \
     -loadbit {up 0x00000000 "./nanoevb/nanoevb.runs/impl_1/project_bd_wrapper.bit" } \
-    -file "../FPGA-bitfiles/Gen2/Gen2.mcs"
+    -file "../../FPGA-bitfiles/Gen2/Gen2.mcs"
+
+    write_cfgmem  -format mcs -disablebitswap -size 4 -interface SPIx4 \
+    -loadbit {up 0x00000000 "./nanoevb/nanoevb.runs/impl_1/project_bd_wrapper.bit" } \
+    -file "../../FPGA-bitfiles/Gen2/Gen2-NOSWAP.mcs"
+
+
 
 
 ### Project / upgrade info

@@ -74,7 +74,7 @@
 # by the PCI Express interface (PERST#).
 set_property PACKAGE_PIN A10 [get_ports sys_rst_n]
 set_property IOSTANDARD LVCMOS33 [get_ports sys_rst_n]
-set_property PULLUP true [get_ports sys_rst_n]
+set_property PULLDOWN true [get_ports sys_rst_n]
 
 # SYS clock 100 MHz (input) signal. The sys_clk_p and sys_clk_n
 # signals are the PCI Express reference clock. 
