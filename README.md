@@ -6,7 +6,7 @@ PicoEVB is an affordable development board which can be used to evaluate and pro
 PCI express designs using Xilinx Artix 7 FPGA on Windows or Linux hosts.
 The board is designed around the Artix 7 (XC7A50T).
 
-PicoEVB is a complete development system in a M.2 (NGFF) 2242 footprint. The JTAG cable
+PicoEVB is a complete development system in a M.2 (NGFF) 2230 footprint. The JTAG cable
 and all necessary power supplies are built in. It will work in the following slots:
  
 - M.2 2230 Key A
@@ -19,19 +19,32 @@ and all necessary power supplies are built in. It will work in the following slo
 - Built-in JTAG cable works with Vivado and Labtools
 - Analog and digital IO
 
-## Specifications
+## Common Specifications
 
-| Feature | PicoEVB |
+| Feature | Specification |
 | --- | --- |
-| FPGA | Xilinx Artix XC7A50T |
-| Form Factor | M.2 (NGFF) 2230, keyed for A and E slots |
-| Dimensions | 22 x 30 x 3.8 mm |
-| Host Interface | PCIe x1 gen 2 |
-| Host Tools | Vivado 2016, 2017 |
+| FPGA | Xilinx Artix XC7A50T-2CSG325C |
+| Form Factor | M.2 (NGFF), keyed for A and E slots |
+| Dimensions | 22 x (30 or 42) x 3.8 mm |
+| Host Interface | PCIe x1 gen 2 (5 Gb/s) |
+| Host Tools | Vivado 2017.3 preferred |
 | MGT Loopback | Yes |
 | Built-in JTAG | Yes |
-| External Interface | 4 digital channels OR 1 analog (differential) and 2 digital, OR 2 analog (differential) |
+| External I/O configurations <BR/> via I/O connector | (digital+ differential analog) <BR/> 4+0 <BR/> 2+1 <BR/> 0+2 |
 | User-controllable LEDs | 3 |
+
+
+## Board Specific Features
+| Feature | NanoEVB <BR/> Rev B,C | PicoEVB <BR/> Rev B | PicoEVB <BR/> Rev C |
+| --- | --- | --- | --- | --- |
+| Form Factor | 2242 | 2230 | 2230 |
+| Spare UART | YES | NO | NO |
+| PCIe 3.3V digital I/O | NO | NO | YES |
+| MGT I/O connectors | NO | NO | YES |
+| Backward Compatability | N/A | YES [1] | YES |
+| Status | discontinued | active | development |
+[1] PicoEVB missing spare UART, but otherwise compatible
+
 
 
 ## Block Diagram

@@ -170,7 +170,7 @@ set_property OFFCHIP_TERM NONE [get_ports TxD]
 ###############################################################################
 
 # High-speed configuration so FPGA is up in time to negotiate with PCIe root complex
-set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
+set_property BITSTREAM.CONFIG.CONFIGRATE 66 [current_design]
 set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
 set_property CONFIG_MODE SPIx4 [current_design]
 set_property BITSTREAM.CONFIG.SPI_FALL_EDGE YES [current_design]

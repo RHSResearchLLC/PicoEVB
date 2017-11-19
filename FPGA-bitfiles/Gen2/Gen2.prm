@@ -8,4 +8,4 @@ Start Address      0x00000000
 End Address        0x003FFFFF
 
 Addr1         Addr2         Date                    File(s)
-0x00000000    0x001706D7    Oct 27 21:06:24 2017    ./nanoevb/nanoevb.runs/impl_1/project_bd_wrapper.bit
+0x00000000    0x001706D7    Nov 18 22:52:33 2017    /home/dr/git/PicoEVB/Vivado/nanoevb/nanoevb/nanoevb.runs/impl_1/project_bd_wrapper.bit
