@@ -111,22 +111,18 @@ set_false_path -from [get_ports sys_rst_n]
 
 
 ###############################################################################
-# NanoEVB, PicoEVB I/O
+# NanoEVB, PicoEVB common I/O
 ###############################################################################
 
-set_property PACKAGE_PIN V14 [get_ports {status_leds[3]}]
-set_property PACKAGE_PIN V13 [get_ports {status_leds[2]}]
-set_property PACKAGE_PIN V11 [get_ports {status_leds[1]}]
+set_property PACKAGE_PIN V14 [get_ports {status_leds[2]}]
+set_property PACKAGE_PIN V13 [get_ports {status_leds[1]}]
 set_property PACKAGE_PIN V12 [get_ports {status_leds[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {status_leds[0]}]
-set_property PULLUP true [get_ports {status_leds[3]}]
 set_property PULLUP true [get_ports {status_leds[2]}]
 set_property PULLUP true [get_ports {status_leds[1]}]
 set_property PULLUP true [get_ports {status_leds[0]}]
-set_property DRIVE 8 [get_ports {status_leds[3]}]
 set_property DRIVE 8 [get_ports {status_leds[2]}]
 set_property DRIVE 8 [get_ports {status_leds[1]}]
 set_property DRIVE 8 [get_ports {status_leds[0]}]
@@ -143,17 +139,30 @@ set_property PULLDOWN true [get_ports clkreq_l]
 # auxio[2] - conn pin 4
 # auxio[3] - conn pin 5
 # Note: These I/O may be re-purposed to use with XADC as analog inputs
-set_property PACKAGE_PIN A14 [get_ports auxio[0]]
-set_property PACKAGE_PIN A13 [get_ports auxio[1]]
-set_property PACKAGE_PIN B12 [get_ports auxio[2]]
-set_property PACKAGE_PIN A12 [get_ports auxio[3]]
-set_property IOSTANDARD LVCMOS33 [get_ports auxio[0]]
-set_property IOSTANDARD LVCMOS33 [get_ports auxio[1]]
-set_property IOSTANDARD LVCMOS33 [get_ports auxio[2]]
-set_property IOSTANDARD LVCMOS33 [get_ports auxio[3]]
+set_property PACKAGE_PIN A14 [get_ports auxio_tri_io[0]]
+set_property PACKAGE_PIN A13 [get_ports auxio_tri_io[1]]
+set_property PACKAGE_PIN B12 [get_ports auxio_tri_io[2]]
+set_property PACKAGE_PIN A12 [get_ports auxio_tri_io[3]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio_tri_io[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio_tri_io[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio_tri_io[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports auxio_tri_io[3]]
 
 ###############################################################################
-# NanoEVB I/O
+# PicoEVB-specific I/O
+# Digital IO on PCIe edge connector (PicoEVB Rev.D and newer)
+###############################################################################
+set_property PACKAGE_PIN K2 [get_ports di_edge[0]]
+set_property PACKAGE_PIN K1 [get_ports di_edge[1]]
+set_property PACKAGE_PIN V2 [get_ports do_edge[0]]
+set_property PACKAGE_PIN V3 [get_ports do_edge[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports di_edge[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports di_edge[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports do_edge[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports do_edge[1]]
+
+###############################################################################
+# NanoEVB-specific I/O
 ###############################################################################
 # Serial input/output
 # Available on NanoEVB only!
