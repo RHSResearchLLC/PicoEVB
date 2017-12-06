@@ -35,7 +35,7 @@ and all necessary power supplies are built in. It will work in the following slo
 
 
 ## Board Specific Features
-| Feature | NanoEVB <BR/> Rev B,C | PicoEVB <BR/> Rev B | PicoEVB <BR/> Rev C |
+| Feature | NanoEVB | PicoEVB Rev B,C | PicoEVB Rev D |
 | --- | --- | --- | --- | --- |
 | Form Factor | 2242 | 2230 | 2230 |
 | Spare UART | YES | NO | NO |

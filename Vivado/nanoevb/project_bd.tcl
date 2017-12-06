@@ -344,7 +344,7 @@ proc create_hier_cell_IOControl { parentCell nameHier } {
   # Create instance: deadbeef_constant, and set properties
   set deadbeef_constant [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 deadbeef_constant ]
   set_property -dict [ list \
-   CONFIG.CONST_VAL {0xdeadbeef} \
+   CONFIG.CONST_VAL {0x45564230} \
    CONFIG.CONST_WIDTH {32} \
  ] $deadbeef_constant
 
