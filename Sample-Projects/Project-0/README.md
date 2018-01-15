@@ -50,17 +50,25 @@ To access the resources below, read/write to a device file (/dev/xdma0_user) at 
 
 
 `aux IO pin` data & direction registers:
+
+
 | D31-D4 | D3    | D2    | D1    | D0    |
 | ---    | ---   | ---   | ---   | ---   |
 | unused | Pin 5 | Pin 4 | Pin 2 | Pin 1 |
 
+
+
 `PCIe digital input` register (see the schematic for pinout of W_DISABLE_1, W_DISABLE_2):
+
+
 | D31-D2 | D1    | D0    |
 | ---    | ---   | ---   |
 | unused |  W_DISABLE_2 | W_DISABLE_1 |
 
 
 `LEDs` register (see the schematic for pinout of M2_LED_1, M2_LED_2):
+
+
 | D31-D4 | D3 | D2 | D1 | D0 |
 | ---    | ---| ---| ---| ---|
 | unused | LED A | LED C | M2_LED_1 | M2_LED_2 |
