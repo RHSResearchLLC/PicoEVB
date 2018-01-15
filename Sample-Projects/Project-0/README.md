@@ -21,11 +21,12 @@ Here is the Vivado block diagram that implements the project. The heavy lifting 
 
 
 The 'B' LED indicates PCIe status:
-| 'B' LED state | Meaning    |
-| ---   | ---   |
-|  Blinking | PCIe link up |
-|  Solid | PCIe link in reset |
-|  Off | PCIe link failure |
+
+| 'B' LED state | Meaning      |
+| ---           | ---          |
+|  Blinking     | PCIe link up |
+|  Solid        | PCIe link in reset |
+|  Off          | PCIe link failure |
 
 ### DMA map
 
