@@ -43,7 +43,9 @@ and all necessary power supplies are built in. It will work in the following slo
 ![Block Diagram](./images/pico-d-diagram.png)
 
 ## How to get one
-[Check us out on Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
+[Crowd Supply $249](https://www.crowdsupply.com/rhs-research/nanoevb)
+[Amazon $249](https://www.amazon.com/dp/B0779PC8S4)
+[ebay $249](https://www.ebay.com/itm/232628349058)
 
 ## More information
 
