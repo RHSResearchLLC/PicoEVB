@@ -57,6 +57,11 @@ or contact info@nanoevb.com
 ![pic](./images/pico-d-bottom.png)
 ![pic](./images/pico-d-with-quarter.png)
 
+### License
+In general, the works in this repo are covered by the [WTFNMFPLv1 license](https://github.com/adversary-org/wtfnmf)
+Each subdirevtory has LICENSE file to specify the terms. If there is no licence file, all rights reserved
+
+
 
 
 

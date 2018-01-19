@@ -1,7 +1,0 @@
-2017 :
-   0.45
-   * Driver to support higher kernel version
-   * Added to enable ‘relaxed Ordering’
-   * When ‘Extended Tag’ is not set for EP. Driver will update DMA with 32 TAGs.
-   * Added version number system.   
-
