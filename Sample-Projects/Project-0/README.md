@@ -8,7 +8,7 @@
 ## Prerequisites:
  - This project uses Xilinx host-side DMA driver, so the driver must be installed and loaded.
 See Xilinx [answer record 65444](https://www.xilinx.com/support/answers/65444.html) to download and install the driver.
-If you are using Ubuntu 17.10 (or another distro with a recent kernel), use the version hosted here. 
+If you are using Ubuntu 17.10 (or another distro with a recent kernel), use the version hosted [here](https://github.com/RHSResearchLLC/XilinxAR65444/tree/master/Linux). 
 It has a bug fix (the latest version on the Xilinx website won't compile as of 09/28/2017)
  - Python 3
 
@@ -27,8 +27,6 @@ The 'B' LED indicates PCIe status:
 |  Blinking     | PCIe link up |
 |  Solid        | PCIe link in reset |
 |  Off          | PCIe link failure |
-
-### DMA map
 
 
 ### I/O map
@@ -74,7 +72,13 @@ To access the resources below, read/write to a device file (/dev/xdma0_user) at 
 | ---    | ---| ---| ---| ---|
 | unused | LED A | LED C | M2_LED_1 | M2_LED_2 |
 
-### Running the program
+### Running the programs
+
+ - A sample program to blink all LEDs: Host/blink-leds.py
+ - A sample program that transfers some data to/from the block ram on the FPGA: Host/dma-test.py
+ - With the Xilinx xdma driver loaded, simply run the python script
+
+Both of these are python3 programs- they won't work properly with Python2
 
 
 ### Modifying the FPGA
