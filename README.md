@@ -53,20 +53,4 @@ and all necessary power supplies are built in. It will work in the following slo
 
 or contact info@nanoevb.com
 
-## Pics
-
-![Image of PicoEVB](./images/pico-d-top.png)
-![pic](./images/pico-d-bottom.png)
-![pic](./images/pico-d-with-quarter.png)
-
-### License
-In general, the works in this repo are covered by the [WTFNMFPLv1 license](https://github.com/adversary-org/wtfnmf)
-Each subdirectory has LICENSE file to specify the terms. If there is no licence file, all rights reserved
-
-
-
-
-
-
-
-
+![Image of PicoEVB](./images/H3-600x660-ind.png)
