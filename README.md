@@ -1,8 +1,5 @@
 # PicoEVB: M.2/NGFF based Xilinx Artix-7 development board
 
-** Note: This page applies to PicoEVB Rev D. For previous revs, select the rev from tags ** 
-
-
 PicoEVB is an affordable development board which can be used to evaluate and prototype 
 PCI express designs using Xilinx Artix 7 FPGA on Windows or Linux hosts.
 The board is designed around the Artix 7 (XC7A50T).
@@ -44,13 +41,18 @@ and all necessary power supplies are built in. It will work in the following slo
 
 ## How to get one
 
+- [Product Website](www.picoevb.com)
 - [Amazon](https://www.amazon.com/dp/B0779PC8S4)
 - [Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
 
 ## More information
 
-[Check out the wiki](https://github.com/RHSResearchLLC/NanoEVB-X1/wiki)
+- [Check out the wiki](https://github.com/RHSResearchLLC/NanoEVB-X1/wiki)
+- [Product Website](www.picoevb.com)
 
 or contact info@nanoevb.com
 
 ![Image of PicoEVB](./images/H3-600x660-ind.png)
+
+** Note: This page applies to PicoEVB Rev D. For previous revs, select the rev from tags ** 
+
