@@ -41,14 +41,14 @@ and all necessary power supplies are built in. It will work in the following slo
 
 ## How to get one
 
-- [Product Website](www.picoevb.com)
+- [Product Website](https://www.picoevb.com)
 - [Amazon](https://www.amazon.com/dp/B0779PC8S4)
 - [Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
 
 ## More information
 
 - [Check out the wiki](https://github.com/RHSResearchLLC/NanoEVB-X1/wiki)
-- [Product Website](www.picoevb.com)
+- [Product Website](https://www.picoevb.com)
 
 or contact info@nanoevb.com
 
