@@ -83,3 +83,17 @@ Both of these are python3 programs- they won't work properly with Python2
 
 ### Modifying the FPGA
 See the readme in the FPGA folder for more information
+
+### Notes for Windows users
+For Windows users, there aren't any Python scripts that implement these examples.
+Instead, the Xilinx-provided tools provide easy acccess to the resources.
+
+`xdma_test.exe`: This will test the DMA between FPGA block ram and host PC
+
+#### An example for controlling LEDs
+
+Set the LED port pins to putput:
+`xdma_rw.exe user write 0x100c 0 0 0 0`
+
+Write all 0's to the LED port (LEDs are active low)
+`xdma_rw.exe user write 0x1008 255 255 255 255`
