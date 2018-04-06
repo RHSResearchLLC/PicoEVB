@@ -95,5 +95,5 @@ Instead, the Xilinx-provided tools provide easy acccess to the resources.
 Set the LED port pins to putput:
 `xdma_rw.exe user write 0x100c 0 0 0 0`
 
-Write all 0's to the LED port (LEDs are active low)
+Write all 1's to the LED port, to turn off the LEDs (LEDs are active low)
 `xdma_rw.exe user write 0x1008 255 255 255 255`
