@@ -9,6 +9,7 @@ and all necessary power supplies are built in. It will work in the following slo
  
 - M.2 2230 Key A
 - M.2 2230 Key E
+- M.2 2280 Key M via an adapter [like this one](https://www.amazon.com/gp/product/B079NB8J3B)
 - Full length mini PCIe via an adapter [like this one](https://www.amazon.com/dp/B01MR76H5F)
 - PCIe x1, x4, x8, or x16 slot via an adapter [like this one](https://www.amazon.com/dp/B013U4401W) 
 
@@ -44,6 +45,7 @@ and all necessary power supplies are built in. It will work in the following slo
 - [Product Website](https://www.picoevb.com)
 - [Amazon](https://www.amazon.com/dp/B0779PC8S4)
 - [Crowd Supply](https://www.crowdsupply.com/rhs-research/nanoevb)
+- [EBay](https://www.ebay.com/itm/232775706324)
 
 ## More information
 
