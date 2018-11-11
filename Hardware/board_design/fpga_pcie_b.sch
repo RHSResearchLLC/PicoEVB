@@ -1,0 +1,388 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Zilog
+LIBS:zetex
+LIBS:Xicor
+LIBS:Worldsemi
+LIBS:wiznet
+LIBS:video
+LIBS:ttl_ieee
+LIBS:transf
+LIBS:switches
+LIBS:supertex
+LIBS:stm32
+LIBS:stm8
+LIBS:silabs
+LIBS:sensors
+LIBS:rfcom
+LIBS:relays
+LIBS:references
+LIBS:pspice
+LIBS:Power_Management
+LIBS:powerint
+LIBS:Oscillators
+LIBS:onsemi
+LIBS:nxp_armmcu
+LIBS:nordicsemi
+LIBS:msp430
+LIBS:motors
+LIBS:motor_drivers
+LIBS:microchip_pic32mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic10mcu
+LIBS:microchip_dspic33dsc
+LIBS:mechanical
+LIBS:maxim
+LIBS:logo
+LIBS:Lattice
+LIBS:ir
+LIBS:hc11
+LIBS:graphic
+LIBS:gennum
+LIBS:ftdi
+LIBS:ESD_Protection
+LIBS:elec-unifil
+LIBS:diode
+LIBS:dc-dc
+LIBS:cmos_ieee
+LIBS:brooktre
+LIBS:bosch
+LIBS:bbd
+LIBS:battery_management
+LIBS:analog_devices
+LIBS:Altera
+LIBS:allegro
+LIBS:actel
+LIBS:ac-dc
+LIBS:74xgxx
+LIBS:xc7a50t-bga325
+LIBS:MAX1589A
+LIBS:MIC47050
+LIBS:TS3L110
+LIBS:W25Q
+LIBS:93LC46B-SOT23
+LIBS:m2-board
+LIBS:ft2232-fixed
+LIBS:tps82084
+LIBS:PicoEVB-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 3 7
+Title "PicoEVB"
+Date "2017-10-17"
+Rev "D"
+Comp "RHS Research, LLC"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 4000 1900 0    60   Input ~ 0
+P1V2_MGTAVTT_B
+$Comp
+L R R1
+U 1 1 586D129E
+P 4250 1900
+F 0 "R1" V 4150 1850 50  0000 C CNN
+F 1 "100" V 4350 1850 50  0000 C CNN
+F 2 "SMT:r_0201_least" V 4180 1900 50  0001 C CNN
+F 3 "~" H 4250 1900 50  0001 C CNN
+F 4 "RC0201FR-07100RL" H 4250 1900 60  0001 C CNN "MPN"
+F 5 "~" H 4250 1900 60  0001 C CNN "MFG"
+	1    4250 1900
+	0    1    1    0   
+$EndComp
+Text GLabel 4400 3250 0    60   Input ~ 0
+MGT0_RX_B+
+Text GLabel 4400 3350 0    60   Input ~ 0
+MGT0_RX_B-
+Text GLabel 4200 2400 0    60   Input ~ 0
+MGT_REFCLK0_B+
+Text GLabel 4200 2500 0    60   Input ~ 0
+MGT_REFCLK0_B-
+Text GLabel 6700 3250 2    60   Input ~ 0
+MGT0_TX_B+
+Text GLabel 6700 3350 2    60   Input ~ 0
+MGT0_TX_B-
+$Comp
+L GND #PWR016
+U 1 1 58882BD6
+P 4350 2950
+F 0 "#PWR016" H 4350 2700 50  0001 C CNN
+F 1 "GND" H 4350 2800 50  0000 C CNN
+F 2 "" H 4350 2950 50  0000 C CNN
+F 3 "" H 4350 2950 50  0000 C CNN
+	1    4350 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L xc7a50tcsg325 U1
+U 5 1 586A5889
+P 4550 2050
+F 0 "U1" H 4750 2300 60  0000 L CNN
+F 1 "XC7AxxT-xCSG325" H 4750 2200 60  0000 L CNN
+F 2 "" H 4550 2050 60  0001 C CNN
+F 3 "" H 4550 2050 60  0001 C CNN
+	5    4550 2050
+	1    0    0    -1  
+$EndComp
+Text Notes 6700 3050 0    60   ~ 0
+MGT loopback
+Text Notes 6350 7050 0    118  ~ 24
+PCI Express / MGT loopback
+$Comp
+L CONN_COAXIAL J2
+U 1 1 59EB4CCF
+P 1750 2350
+F 0 "J2" H 1760 2470 50  0000 C CNN
+F 1 "RX+" V 1865 2350 50  0000 C CNN
+F 2 "SMT:U.FL-COAX" H 1750 2350 50  0001 C CNN
+F 3 "" H 1750 2350 50  0001 C CNN
+F 4 "U.FL-R-SMT(10)" H 1750 2350 60  0001 C CNN "MPN"
+	1    1750 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_COAXIAL J6
+U 1 1 59EB4D49
+P 7400 2100
+F 0 "J6" H 7410 2220 50  0000 C CNN
+F 1 "TX-" V 7515 2100 50  0000 C CNN
+F 2 "SMT:U.FL-COAX" H 7400 2100 50  0001 C CNN
+F 3 "" H 7400 2100 50  0001 C CNN
+F 4 "U.FL-R-SMT(10)" H 7400 2100 60  0001 C CNN "MPN"
+	1    7400 2100
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_COAXIAL J5
+U 1 1 59EB4D73
+P 7050 2100
+F 0 "J5" H 7060 2220 50  0000 C CNN
+F 1 "TX+" V 7165 2100 50  0000 C CNN
+F 2 "SMT:U.FL-COAX" H 7050 2100 50  0001 C CNN
+F 3 "" H 7050 2100 50  0001 C CNN
+F 4 "U.FL-R-SMT(10)" H 7050 2100 60  0001 C CNN "MPN"
+	1    7050 2100
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_COAXIAL J1
+U 1 1 59EB4DA0
+P 1250 2350
+F 0 "J1" H 1260 2470 50  0000 C CNN
+F 1 "RX-" V 1365 2350 50  0000 C CNN
+F 2 "SMT:U.FL-COAX" H 1250 2350 50  0001 C CNN
+F 3 "" H 1250 2350 50  0001 C CNN
+F 4 "U.FL-R-SMT(10)" H 1250 2350 60  0001 C CNN "MPN"
+	1    1250 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4400 3250 4550 3250
+Wire Wire Line
+	4550 2050 4450 2050
+Wire Wire Line
+	4450 2050 4450 1900
+Wire Wire Line
+	4450 1900 4400 1900
+Wire Wire Line
+	4100 1900 4000 1900
+Wire Wire Line
+	4550 2500 4200 2500
+Wire Wire Line
+	4550 2400 4200 2400
+Wire Wire Line
+	6700 3250 6350 3250
+Wire Wire Line
+	6700 3350 6350 3350
+Wire Wire Line
+	4550 3350 4400 3350
+Wire Wire Line
+	4550 3050 3600 3050
+Wire Wire Line
+	3600 3050 3600 3550
+Wire Wire Line
+	3600 3550 7450 3550
+Wire Wire Line
+	7450 3550 7450 3050
+Wire Wire Line
+	7450 3050 6350 3050
+Wire Wire Line
+	3650 3150 3650 3500
+Wire Wire Line
+	3650 3500 7400 3500
+Wire Wire Line
+	7400 3500 7400 3150
+Wire Wire Line
+	7400 3150 6350 3150
+Wire Wire Line
+	4550 3150 3650 3150
+Wire Wire Line
+	6900 2650 6350 2650
+Wire Wire Line
+	6900 2100 6900 2650
+Wire Wire Line
+	7250 2100 7250 2750
+Wire Wire Line
+	7250 2750 6350 2750
+$Comp
+L CONN_COAXIAL J4
+U 1 1 59EB4EEE
+P 2850 1850
+F 0 "J4" H 2860 1970 50  0000 C CNN
+F 1 "CLKIN+" V 2965 1850 50  0000 C CNN
+F 2 "SMT:U.FL-COAX" H 2850 1850 50  0001 C CNN
+F 3 "" H 2850 1850 50  0001 C CNN
+F 4 "U.FL-R-SMT(10)" H 2850 1850 60  0001 C CNN "MPN"
+	1    2850 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_COAXIAL J3
+U 1 1 59EB4FDE
+P 2450 1850
+F 0 "J3" H 2460 1970 50  0000 C CNN
+F 1 "CLKIN-" V 2565 1850 50  0000 C CNN
+F 2 "SMT:U.FL-COAX" H 2450 1850 50  0001 C CNN
+F 3 "" H 2450 1850 50  0001 C CNN
+F 4 "U.FL-R-SMT(10)" H 2450 1850 60  0001 C CNN "MPN"
+	1    2450 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 2200 3000 2200
+Wire Wire Line
+	3000 2200 3000 1850
+Wire Wire Line
+	2600 1850 2600 2300
+Wire Wire Line
+	2600 2300 4550 2300
+Text Label 6350 2650 0    60   ~ 0
+UMGT0_TX+
+Text Label 6350 2750 0    60   ~ 0
+UMGT0_TX-
+NoConn ~ 6350 2850
+NoConn ~ 6350 2950
+Wire Wire Line
+	4350 2950 4550 2950
+Wire Wire Line
+	4550 2850 4500 2850
+Wire Wire Line
+	4500 2850 4500 2950
+Connection ~ 4500 2950
+Wire Wire Line
+	4550 2650 1900 2650
+Wire Wire Line
+	1900 2650 1900 2350
+Wire Wire Line
+	4550 2750 1400 2750
+Wire Wire Line
+	1400 2750 1400 2350
+Text Label 3900 2650 0    60   ~ 0
+UMGT0_RX+
+Text Label 3900 2750 0    60   ~ 0
+UMGT0_RX-
+Text Label 3900 2200 0    60   ~ 0
+UMGTCLK_0+
+Text Label 3900 2300 0    60   ~ 0
+UMGTCLK_0-
+$Comp
+L GND #PWR017
+U 1 1 59ED3E1B
+P 7050 1900
+F 0 "#PWR017" H 7050 1650 50  0001 C CNN
+F 1 "GND" H 7050 1750 50  0000 C CNN
+F 2 "" H 7050 1900 50  0001 C CNN
+F 3 "" H 7050 1900 50  0001 C CNN
+	1    7050 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR018
+U 1 1 59ED3E5D
+P 1250 2150
+F 0 "#PWR018" H 1250 1900 50  0001 C CNN
+F 1 "GND" H 1250 2000 50  0000 C CNN
+F 2 "" H 1250 2150 50  0001 C CNN
+F 3 "" H 1250 2150 50  0001 C CNN
+	1    1250 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR019
+U 1 1 59ED3E80
+P 1750 2150
+F 0 "#PWR019" H 1750 1900 50  0001 C CNN
+F 1 "GND" H 1750 2000 50  0000 C CNN
+F 2 "" H 1750 2150 50  0001 C CNN
+F 3 "" H 1750 2150 50  0001 C CNN
+	1    1750 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 59ED3EA3
+P 2450 1650
+F 0 "#PWR020" H 2450 1400 50  0001 C CNN
+F 1 "GND" H 2450 1500 50  0000 C CNN
+F 2 "" H 2450 1650 50  0001 C CNN
+F 3 "" H 2450 1650 50  0001 C CNN
+	1    2450 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR021
+U 1 1 59ED3EC6
+P 2850 1650
+F 0 "#PWR021" H 2850 1400 50  0001 C CNN
+F 1 "GND" H 2850 1500 50  0000 C CNN
+F 2 "" H 2850 1650 50  0001 C CNN
+F 3 "" H 2850 1650 50  0001 C CNN
+	1    2850 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR022
+U 1 1 59ED3F33
+P 7400 1900
+F 0 "#PWR022" H 7400 1650 50  0001 C CNN
+F 1 "GND" H 7400 1750 50  0000 C CNN
+F 2 "" H 7400 1900 50  0001 C CNN
+F 3 "" H 7400 1900 50  0001 C CNN
+	1    7400 1900
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
