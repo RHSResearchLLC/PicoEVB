@@ -1,6 +1,9 @@
 {
-   ExpandedHierarchyInLayout: "",
-   comment_0: "PCIe status LED logic
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.62428",
+   "Default View_TopLeft":"-24,-3",
+   "ExpandedHierarchyInLayout":"",
+   "comment_0":"PCIe status LED logic
 LED output is active low
 
 - Flashing if link is up
@@ -13,57 +16,84 @@ reset_n | link_up | clk | out
     0            x          x      0
     1            0          x      1
     1            1                clk",
-   commentid: "comment_0|",
-   font_comment_0: "14",
-   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+   "commentid":"comment_0|",
+   "font_comment_0":"14",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port sys -pg 1 -y 60 -defaultsOSRD
-preplace port TxD -pg 1 -y 20 -defaultsOSRD
-preplace port pcie_mgt -pg 1 -y 100 -defaultsOSRD
-preplace port auxio -pg 1 -y 40 -defaultsOSRD
-preplace port sys_rst_n -pg 1 -y 80 -defaultsOSRD
-preplace port RxD -pg 1 -y 20 -defaultsOSRD
-preplace portBus do_edge -pg 1 -y 80 -defaultsOSRD
-preplace portBus clkreq_l -pg 1 -y 60 -defaultsOSRD
-preplace portBus di_edge -pg 1 -y 40 -defaultsOSRD
-preplace portBus status_leds -pg 1 -y 120 -defaultsOSRD
-preplace inst clkreq_l_tieoff -pg 1 -lvl 1 -y 630 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
-preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 1 -y 520 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 2 -y 200 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -y 190 -defaultsOSRD
-preplace inst IOControl -pg 1 -lvl 1 -y 90 -defaultsOSRD
-preplace inst util_ds_buf -pg 1 -lvl 1 -y 790 -defaultsOSRD
-preplace inst xdma_0 -pg 1 -lvl 1 -y 1000 -defaultsOSRD
-preplace inst StatusLEDControl -pg 1 -lvl 1 -y 230 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -y 360 -defaultsOSRD
-preplace netloc xlslice_1_Dout 1 2 1 N
-preplace netloc xlconstant_0_dout1 1 1 3 430J 20 670J 60 N
-preplace netloc util_ds_buf_IBUF_OUT 1 0 2 100 720 410
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 0 2 90 440 420
-preplace netloc axi_bram_ctrl_0_BRAM_PORTB 1 0 2 100 450 410
-preplace netloc xdma_0_axi_aclk 1 0 2 40 1140 410
-preplace netloc link_up_1 1 0 2 60 710 420
-preplace netloc RXD_1 1 0 4 20J 0 NJ 0 NJ 0 880
-preplace netloc ARESETN_1 1 0 2 80 690 440
-preplace netloc di_edge_1 1 0 1 40
-preplace netloc StatusLEDControl_PCIe_LED 1 1 2 410J 260 670
-preplace netloc diff_clock_rtl_1 1 0 1 30
-preplace netloc xlconcat_0_dout 1 3 1 870
-preplace netloc axi_gpio_0_GPIO2 1 1 3 440 30 NJ 30 880J
-preplace netloc S00_AXI_1 1 0 2 50 700 430
-preplace netloc xdma_0_M_AXI 1 0 2 70 860 410
-preplace netloc xdma_0_pcie_mgt 1 1 3 450 40 NJ 40 870J
-preplace netloc axi_gpio_1_gpio2_io_o 1 1 1 440
-preplace netloc xlslice_0_Dout 1 2 2 NJ 100 860
-preplace netloc reset_rtl_1 1 0 1 20
-preplace cgraphic comment_0 place top 0 10 textcolor 4 linecolor 3
-levelinfo -pg 1 0 260 570 770 920 -top -10 -bot 1150
+preplace port auxio -pg 1 -lvl 8 -x 2510 -y 200 -defaultsOSRD
+preplace port pcie_mgt -pg 1 -lvl 8 -x 2510 -y 1130 -defaultsOSRD
+preplace port sys -pg 1 -lvl 0 -x -10 -y 1190 -defaultsOSRD
+preplace port SPI_0 -pg 1 -lvl 8 -x 2510 -y 490 -defaultsOSRD
+preplace port sys_rst_n -pg 1 -lvl 0 -x -10 -y 1260 -defaultsOSRD
+preplace portBus di_edge -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace portBus status_leds -pg 1 -lvl 8 -x 2510 -y 860 -defaultsOSRD
+preplace portBus clkreq_l -pg 1 -lvl 8 -x 2510 -y 260 -defaultsOSRD
+preplace portBus do_edge -pg 1 -lvl 8 -x 2510 -y 370 -defaultsOSRD
+preplace inst StatusLEDControl -pg 1 -lvl 6 -x 2130 -y 1050 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 7 -x 2390 -y 860 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -x 960 -y 730 -defaultsOSRD
+preplace inst axi_bram_ctrl_0_bram -pg 1 -lvl 4 -x 1330 -y 640 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 4 -x 1330 -y 510 -defaultsOSRD
+preplace inst clkreq_l_tieoff -pg 1 -lvl 7 -x 2390 -y 260 -defaultsOSRD
+preplace inst util_ds_buf -pg 1 -lvl 1 -x 160 -y 1190 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 4 -x 1330 -y 830 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 2 -x 550 -y 1050 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 7 -x 2390 -y 370 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 1330 -y 180 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 4 -x 1330 -y 350 -defaultsOSRD
+preplace inst version_constant -pg 1 -lvl 4 -x 1330 -y 60 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -x 960 -y 490 -defaultsOSRD
+preplace inst const_10ee -pg 1 -lvl 1 -x 160 -y 880 -defaultsOSRD
+preplace inst const_7021 -pg 1 -lvl 1 -x 160 -y 1320 -defaultsOSRD
+preplace inst const_rev -pg 1 -lvl 1 -x 160 -y 980 -defaultsOSRD
+preplace inst const_0007 -pg 1 -lvl 1 -x 160 -y 1080 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 960 -y 970 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 1330 -y 1050 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 6 -x 2130 -y 880 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 5 -x 1880 -y 780 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 6 -x 2130 -y 760 -defaultsOSRD
+preplace netloc StatusLEDControl_PCIe_LED 1 6 1 2290 840n
+preplace netloc axi_gpio_1_gpio2_io_o 1 4 3 1480 370 N 370 NJ
+preplace netloc di_edge_1 1 0 5 NJ 260 NJ 260 NJ 260 NJ 260 1480
+preplace netloc reset_rtl_1 1 0 6 NJ 1260 330 1200 790J 1120 NJ 1120 NJ 1120 1980
+preplace netloc util_ds_buf_IBUF_OUT 1 1 1 310 1100n
+preplace netloc xlconcat_0_dout 1 7 1 NJ 860
+preplace netloc xlconstant_0_dout1 1 7 1 NJ 260
+preplace netloc xlslice_0_Dout 1 7 1 NJ 370
+preplace netloc xlconstant_0_dout 1 4 1 1480 60n
+preplace netloc ARESETN_1 1 2 2 790 310 1170
+preplace netloc const_10ee_dout 1 1 1 320 880n
+preplace netloc const_10ee1_dout 1 1 1 320J 1040n
+preplace netloc const_7022_dout 1 1 1 310J 980n
+preplace netloc const_0007_dout 1 1 1 NJ 1080
+preplace netloc clk_wiz_0_clk_out1 1 3 1 1150 500n
+preplace netloc ACLK_1 1 2 4 760 300 1140 980 NJ 980 1980
+preplace netloc xdma_0_user_lnk_up 1 2 2 N 1040 NJ
+preplace netloc clk_wiz_0_locked 1 3 1 1110 980n
+preplace netloc util_vector_logic_0_Res 1 4 2 N 1050 N
+preplace netloc util_vector_logic_1_Res 1 6 1 NJ 880
+preplace netloc xadc_wiz_0_alarm_out 1 4 2 N 880 N
+preplace netloc xlslice_1_Dout 1 5 1 1980 760n
+preplace netloc util_vector_logic_2_Res 1 6 1 2280 760n
+preplace netloc axi_interconnect_0_M03_AXI 1 3 1 1120 330n
+preplace netloc axi_interconnect_0_M01_AXI 1 3 1 N 480
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 1 1160 640n
+preplace netloc axi_gpio_0_GPIO2 1 4 4 NJ 200 N 200 NJ 200 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 1110 160n
+preplace netloc diff_clock_rtl_1 1 0 1 NJ 1190
+preplace netloc xdma_0_M_AXI 1 2 1 780 710n
+preplace netloc axi_interconnect_0_M02_AXI 1 3 1 1130 500n
+preplace netloc xdma_0_M_AXI_LITE 1 2 1 770 370n
+preplace netloc xdma_0_pcie_mgt 1 2 6 780J 1130 NJ 1130 NJ 1130 N 1130 NJ 1130 NJ
+preplace netloc axi_quad_spi_0_SPI_0 1 4 4 NJ 490 N 490 NJ 490 NJ
+preplace cgraphic comment_0 place left -299 18 textcolor 4 linecolor 3
+levelinfo -pg 1 -10 160 550 960 1330 1880 2130 2390 2510
+pagesize -pg 1 -db -bbox -sgen -140 -40 2660 1420
 ",
-   linktoobj_comment_0: "",
-   linktotype_comment_0: "bd_design",
+   "linktoobj_comment_0":"",
+   "linktotype_comment_0":"bd_design"
 }
 0
 {
-   /comment_0: "comment_0",
+   "/comment_0":"comment_0"
 }

@@ -1,0 +1,28 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x -10 -y 80 -defaultsOSRD
+preplace port auxio -pg 1 -lvl 3 -x 650 -y 190 -defaultsOSRD
+preplace port s_axi_aclk -pg 1 -lvl 0 -x -10 -y 100 -defaultsOSRD
+preplace port s_axi_aresetn -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace portBus di_edge -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
+preplace portBus gpio2_io_o -pg 1 -lvl 3 -x 650 -y 420 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 2 -x 480 -y 170 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 2 -x 480 -y 390 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -x 170 -y 160 -defaultsOSRD
+preplace inst version_constant -pg 1 -lvl 2 -x 480 -y 50 -defaultsOSRD
+preplace netloc ARESETN_1 1 0 2 10 10 340
+preplace netloc axi_gpio_1_gpio2_io_o 1 2 1 NJ 420
+preplace netloc di_edge_1 1 0 3 NJ 300 NJ 300 620
+preplace netloc xdma_0_axi_aclk 1 0 2 20 20 330
+preplace netloc xlconstant_0_dout 1 2 1 620 50n
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 N 150
+preplace netloc axi_interconnect_0_M01_AXI 1 1 1 320 170n
+preplace netloc S00_AXI_1 1 0 1 NJ 80
+preplace netloc axi_gpio_0_GPIO2 1 2 1 NJ 190
+levelinfo -pg 1 -10 170 480 650
+pagesize -pg 1 -db -bbox -sgen -150 -10 800 480
+"
+}
+0

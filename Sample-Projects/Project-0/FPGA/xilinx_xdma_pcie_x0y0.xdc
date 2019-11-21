@@ -162,21 +162,30 @@ set_property IOSTANDARD LVCMOS33 [get_ports do_edge[0]]
 set_property IOSTANDARD LVCMOS33 [get_ports do_edge[1]]
 
 ###############################################################################
-# NanoEVB-specific I/O
+# SPI
 ###############################################################################
-# Serial input/output
-# Available on NanoEVB only!
-set_property IOSTANDARD LVCMOS33 [get_ports RxD]
-set_property IOSTANDARD LVCMOS33 [get_ports TxD]
-set_property PACKAGE_PIN V17 [get_ports RxD]
-set_property PACKAGE_PIN V16 [get_ports TxD]
-set_property PULLUP true [get_ports RxD]
-set_property OFFCHIP_TERM NONE [get_ports TxD]
+set_property PACKAGE_PIN K16 [get_ports {SPI_0_io0_io}]
+set_property PACKAGE_PIN L17 [get_ports {SPI_0_io1_io}]
+set_property PACKAGE_PIN J15 [get_ports {SPI_0_io2_io}]
+set_property PACKAGE_PIN J16 [get_ports {SPI_0_io3_io}]
+set_property PACKAGE_PIN L15 [get_ports {SPI_0_ss_io}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {SPI_0_io0_io}]
+set_property IOSTANDARD LVCMOS33 [get_ports {SPI_0_io1_io}]
+set_property IOSTANDARD LVCMOS33 [get_ports {SPI_0_io2_io}]
+set_property IOSTANDARD LVCMOS33 [get_ports {SPI_0_io3_io}]
+set_property IOSTANDARD LVCMOS33 [get_ports {SPI_0_ss_io}]
+
+#set_property PACKAGE_PIN L15 [get_ports {real_spi_ss}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {real_spi_ss}]
 
 
 ###############################################################################
 # Additional design / project settings
 ###############################################################################
+
+# Power down on overtemp
+set_property BITSTREAM.CONFIG.OVERTEMPPOWERDOWN ENABLE [current_design]
 
 # High-speed configuration so FPGA is up in time to negotiate with PCIe root complex
 set_property BITSTREAM.CONFIG.CONFIGRATE 66 [current_design]
