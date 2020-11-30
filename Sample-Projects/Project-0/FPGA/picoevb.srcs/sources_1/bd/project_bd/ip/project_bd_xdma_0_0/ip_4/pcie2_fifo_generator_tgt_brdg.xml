@@ -1758,6 +1758,15 @@
           <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CORE_CLK.FREQ_HZ">100000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CORE_CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
           <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CORE_CLK.PHASE">0.000</spirit:value>
           <spirit:vendorExtensions>
@@ -1838,6 +1847,15 @@
           <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.MASTER_ACLK.FREQ_HZ">100000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.MASTER_ACLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
           <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.MASTER_ACLK.PHASE">0.000</spirit:value>
           <spirit:vendorExtensions>
@@ -1913,6 +1931,15 @@
           <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SLAVE_ACLK.FREQ_HZ">100000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLAVE_ACLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
           <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLAVE_ACLK.PHASE">0.000</spirit:value>
           <spirit:vendorExtensions>
@@ -1969,6 +1996,15 @@
           <spirit:displayName>write clock frequency</spirit:displayName>
           <spirit:description>specify frequency of the clock connected to port wr_clk</spirit:description>
           <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.WRITE_CLK.FREQ_HZ">100000000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.WRITE_CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -2045,6 +2081,15 @@
           <spirit:displayName>read clock frequency</spirit:displayName>
           <spirit:description>specify frequency of the clock connected to port rd_clk</spirit:description>
           <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.READ_CLK.FREQ_HZ">100000000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.READ_CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -10755,7 +10800,7 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="368bbe6b"/>
       <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4586976f"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b5bea739"/>

@@ -13,9 +13,11 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.ASSOCIATED_RESET"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.FREQ_HZ">100000000</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.FREQ_TOLERANCE_HZ">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.SYS_CLK.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.CLK_DOMAIN"/>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.FREQ_TOLERANCE_HZ">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.INSERT_VIP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.M_AXIS_RX.CLK_DOMAIN"/>
@@ -509,12 +511,12 @@
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.USE_RDI_CUSTOMIZATION">TRUE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.USE_RDI_GENERATION">TRUE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPCONTEXT">IP_Flow</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPREVISION">11</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPREVISION">12</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.MANAGED">TRUE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.OUTPUTDIR">.</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SELECTEDSIMMODEL"/>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SHAREDDIR">../../../ipshared</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2019.2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2020.1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SYNTHESISFLOW">GLOBAL</spirit:configurableElementValue>
       </spirit:configurableElementValues>
       <spirit:vendorExtensions>

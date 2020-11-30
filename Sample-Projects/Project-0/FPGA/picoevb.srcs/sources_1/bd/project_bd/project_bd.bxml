@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="project_bd" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1574301351"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1574301351"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1574301351"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1574301351"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1597371873"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1597371873"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1597371873"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1597371873"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\project_bd_axi_bram_ctrl_0_0\project_bd_axi_bram_ctrl_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_bram_ctrl_0"/>
@@ -143,14 +143,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\project_bd_xbar_0\project_bd_xbar_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_interconnect_0/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\project_bd_axi_interconnect_0_0\project_bd_axi_interconnect_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_interconnect_0"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -225,6 +217,14 @@
       </File>
       <File Name="ip\project_bd_util_vector_logic_1_1\project_bd_util_vector_logic_1_1.xci" Type="IP">
         <Instance HierarchyPath="util_vector_logic_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\project_bd_xbar_0\project_bd_xbar_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0/xbar"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

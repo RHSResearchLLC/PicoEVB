@@ -789,6 +789,15 @@
           </spirit:vendorExtensions>
         </spirit:parameter>
         <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.SYS_CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
           <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.SYS_CLK.PHASE">0.000</spirit:value>
           <spirit:vendorExtensions>
@@ -864,6 +873,15 @@
         <spirit:parameter>
           <spirit:name>ASSOCIATED_RESET</spirit:name>
           <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.ASSOCIATED_RESET">user_reset_out</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -3330,7 +3348,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e0d73d58</spirit:value>
+            <spirit:value>9:5343109b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -11660,7 +11678,7 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>11</xilinx:coreRevision>
+      <xilinx:coreRevision>12</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_RX.HAS_TKEEP" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_RX.HAS_TLAST" xilinx:valueSource="constant"/>
@@ -11731,9 +11749,9 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="497c095d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b542efda"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f7bbe359"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="15aa083d"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b45ff4ad"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="8376444c"/>

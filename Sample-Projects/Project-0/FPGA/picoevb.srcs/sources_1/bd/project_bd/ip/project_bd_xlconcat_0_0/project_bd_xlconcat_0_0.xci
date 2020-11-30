@@ -103,11 +103,40 @@
       <spirit:vendorExtensions>
         <xilinx:componentInstanceExtensions>
           <xilinx:configElementInfos>
-            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN0_WIDTH" xilinx:valueSource="propagated"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN0_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN10_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN11_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN12_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN13_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN14_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN15_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN16_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN17_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN18_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN19_WIDTH" xilinx:valuePermission="bd_and_user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN1_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN20_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN21_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN22_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN23_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN24_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN25_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN26_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN27_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN28_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN29_WIDTH" xilinx:valuePermission="bd_and_user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN2_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN30_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN31_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN3_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN4_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN5_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN6_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN7_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN8_WIDTH" xilinx:valuePermission="bd_and_user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IN9_WIDTH" xilinx:valuePermission="bd_and_user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.NUM_PORTS" xilinx:valueSource="user"/>
-            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.dout_width" xilinx:valueSource="user"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.dout_width" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
           </xilinx:configElementInfos>
         </xilinx:componentInstanceExtensions>
       </spirit:vendorExtensions>
