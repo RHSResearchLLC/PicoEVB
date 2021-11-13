@@ -129,8 +129,8 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2017.3</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6c712140"/>
+      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8ba71b33"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="99e4b00a"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="426d7563"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="80130fcb"/>

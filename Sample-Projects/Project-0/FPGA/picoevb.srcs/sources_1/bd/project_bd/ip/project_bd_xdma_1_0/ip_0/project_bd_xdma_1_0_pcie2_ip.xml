@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>customized_ip</spirit:library>
-  <spirit:name>project_bd_xdma_0_0_pcie2_ip</spirit:name>
+  <spirit:name>project_bd_xdma_1_0_pcie2_ip</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -144,7 +144,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_RX.PHASE">0.000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_RX.PHASE">0.0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -319,7 +319,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_TX.PHASE">0.000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_TX.PHASE">0.0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -799,7 +799,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.SYS_CLK.PHASE">0.000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.SYS_CLK.PHASE">0.0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -885,7 +885,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.PHASE">0.000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.USER_CLK_OUT.PHASE">0.0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -2239,7 +2239,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie_sharedlogic_int_clk" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie_sharedlogic_int_clk" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -3348,7 +3348,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5343109b</spirit:value>
+            <spirit:value>9:6c19d057</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3432,7 +3432,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_pclk_out_slave" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_pclk_out_slave" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3451,7 +3451,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_pipe_rxusrclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_pipe_rxusrclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3474,7 +3474,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_rxoutclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_rxoutclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3493,7 +3493,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_dclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_dclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3512,7 +3512,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_mmcm_lock_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_mmcm_lock_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3531,7 +3531,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_userclk1_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_userclk1_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3550,7 +3550,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_userclk2_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_userclk2_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3569,7 +3569,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_oobclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_oobclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3592,7 +3592,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_qplllock_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_qplllock_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3615,7 +3615,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_qplloutclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_qplloutclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3638,7 +3638,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_qplloutrefclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_qplloutrefclk_out" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3664,7 +3664,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_pclk_sel_slave" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.int_pclk_sel_slave" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -8492,30 +8492,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt_ch_drp_rdy" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
-            </xilinx:enablement>
-          </xilinx:portInfo>
-        </spirit:vendorExtensions>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>pipe_debug_0</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.LINK_CAP_MAX_LINK_WIDTH&apos;)) - 1)">0</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_elaboratesubcores</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-        <spirit:vendorExtensions>
-          <xilinx:portInfo>
-            <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pipe_debug_0" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.gt_ch_drp_rdy" xilinx:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.EXT_CH_GT_DRP&apos;)) = &quot;TRUE&quot;) || (spirit:decode(id(&apos;MODELPARAM_VALUE.TRANSCEIVER_CTRL_STATUS_PORTS&apos;)) = &quot;TRUE&quot;))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -9524,7 +9501,7 @@
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="string">
         <spirit:name>c_component_name</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_component_name">project_bd_xdma_0_0_pcie2_ip</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.c_component_name">project_bd_xdma_1_0_pcie2_ip</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>dev_port_type</spirit:name>
@@ -9564,11 +9541,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_0</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_0">FFF0000C</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_0">FFF00000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_1</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_1">FFFFFFFF</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.bar_1">00000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>bar_2</spirit:name>
@@ -10322,7 +10299,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>SHARED_LOGIC_IN_CORE</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE">TRUE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SHARED_LOGIC_IN_CORE">FALSE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ERR_REPORTING_IF</spirit:name>
@@ -10372,6 +10349,10 @@
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ENABLE_JTAG_DBG</spirit:name>
         <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_JTAG_DBG">FALSE</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>REDUCE_OOB_FREQ</spirit:name>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.REDUCE_OOB_FREQ">FALSE</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -10533,11 +10514,6 @@
       <spirit:enumeration>128</spirit:enumeration>
       <spirit:enumeration>256</spirit:enumeration>
       <spirit:enumeration>512</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_pairs_01c13166</spirit:name>
-      <spirit:enumeration spirit:text="BAR 1:0">BAR_1:0</spirit:enumeration>
-      <spirit:enumeration spirit:text="BAR 3:2">BAR_3:2</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_067d6dc7</spirit:name>
@@ -10713,6 +10689,11 @@
       <spirit:enumeration spirit:text="Generic modem">Generic_modem</spirit:enumeration>
       <spirit:enumeration spirit:text="16950 compatible serial controller">16950_compatible_serial_controller</spirit:enumeration>
     </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_e75bad89</spirit:name>
+      <spirit:enumeration spirit:text="BAR 0">BAR_0</spirit:enumeration>
+      <spirit:enumeration spirit:text="BAR 3:2">BAR_3:2</spirit:enumeration>
+    </spirit:choice>
   </spirit:choices>
   <spirit:description>The Xilinx 7 Series Integrated Block for PCI Express (1-lane, 2-lane, 4-lane, and 8-lane) uses the 7-Series Integrated Hard IP Block for PCI Express in conjunction with flexible 7-Series architectural features to implement a PCI Express Base Specification v2.1 compliant PCI Express Endpoint or Root Port. Unique features of the LogiCORE Block for PCI Express are the high performance AXI Interface, optimal buffering for high bandwidth applications, and BAR checking and filtering.</spirit:description>
   <spirit:parameters>
@@ -10727,7 +10708,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">project_bd_xdma_0_0_pcie2_ip</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">project_bd_xdma_1_0_pcie2_ip</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Device_Port_Type</spirit:name>
@@ -10759,15 +10740,15 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_64bit</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_64bit" spirit:order="203">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_64bit" spirit:order="203">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Prefetchable</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Prefetchable" spirit:order="204">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Prefetchable" spirit:order="204">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Scale</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Scale" spirit:choiceRef="choice_list_ea588113" spirit:order="205">Megabytes</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Bar0_Scale" spirit:choiceRef="choice_list_52d29139" spirit:order="205">Megabytes</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Bar0_Size</spirit:name>
@@ -11115,7 +11096,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MSIx_Table_BIR</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_Table_BIR" spirit:choiceRef="choice_pairs_01c13166" spirit:order="710">BAR_1:0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_Table_BIR" spirit:choiceRef="choice_pairs_e75bad89" spirit:order="710">BAR_0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MSIx_PBA_Offset</spirit:name>
@@ -11123,7 +11104,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MSIx_PBA_BIR</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_PBA_BIR" spirit:choiceRef="choice_pairs_01c13166" spirit:order="712">BAR_1:0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.MSIx_PBA_BIR" spirit:choiceRef="choice_pairs_e75bad89" spirit:order="712">BAR_0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Device_Specific_Initialization</spirit:name>
@@ -11615,7 +11596,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>shared_logic_in_core</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.shared_logic_in_core" spirit:order="2059">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.shared_logic_in_core" spirit:order="2059">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>pl_interface</spirit:name>
@@ -11670,6 +11651,10 @@
       <spirit:name>enable_jtag_dbg</spirit:name>
       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_jtag_dbg" spirit:order="2064">false</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>reduce_oob_freq</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.reduce_oob_freq" spirit:order="2065">false</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
@@ -11678,7 +11663,7 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>12</xilinx:coreRevision>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_RX.HAS_TKEEP" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_RX.HAS_TLAST" xilinx:valueSource="constant"/>
@@ -11698,7 +11683,6 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_TX.TUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Bar0_64bit" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Bar0_Enabled" xilinx:valueSource="propagated"/>
-        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Bar0_Prefetchable" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Bar0_Scale" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Bar0_Size" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Bar1_Enabled" xilinx:valueSource="propagated"/>
@@ -11749,12 +11733,12 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="497c095d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f7bbe359"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="15aa083d"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b45ff4ad"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8376444c"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="eff7439a"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="3b233086"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1365fc42"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8ec3642b"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

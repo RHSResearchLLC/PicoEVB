@@ -1,7 +1,7 @@
---Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2019.2 (win64) Build 2700185 Thu Oct 24 18:46:05 MDT 2019
---Date        : Wed Nov 20 14:29:02 2019
+--Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+--Date        : Fri Nov 12 23:23:32 2021
 --Host        : DESKTOP-FKBOMH7 running 64-bit major release  (build 9200)
 --Command     : generate_target project_bd_wrapper.bd
 --Design      : project_bd_wrapper
@@ -44,12 +44,6 @@ architecture STRUCTURE of project_bd_wrapper is
     auxio_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     auxio_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     auxio_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    sys_clk_p : in STD_LOGIC_VECTOR ( 0 to 0 );
-    sys_clk_n : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pcie_mgt_rxn : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pcie_mgt_rxp : in STD_LOGIC_VECTOR ( 0 to 0 );
-    pcie_mgt_txn : out STD_LOGIC_VECTOR ( 0 to 0 );
-    pcie_mgt_txp : out STD_LOGIC_VECTOR ( 0 to 0 );
     SPI_0_io0_i : in STD_LOGIC;
     SPI_0_io0_o : out STD_LOGIC;
     SPI_0_io0_t : out STD_LOGIC;
@@ -64,7 +58,13 @@ architecture STRUCTURE of project_bd_wrapper is
     SPI_0_io3_t : out STD_LOGIC;
     SPI_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     SPI_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    SPI_0_ss_t : out STD_LOGIC
+    SPI_0_ss_t : out STD_LOGIC;
+    sys_clk_p : in STD_LOGIC_VECTOR ( 0 to 0 );
+    sys_clk_n : in STD_LOGIC_VECTOR ( 0 to 0 );
+    pcie_mgt_rxn : in STD_LOGIC_VECTOR ( 0 to 0 );
+    pcie_mgt_rxp : in STD_LOGIC_VECTOR ( 0 to 0 );
+    pcie_mgt_txn : out STD_LOGIC_VECTOR ( 0 to 0 );
+    pcie_mgt_txp : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component project_bd;
   component IOBUF is

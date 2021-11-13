@@ -32,7 +32,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CONST_VAL</spirit:name>
         <spirit:displayName>Const Val</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CONST_VAL" spirit:bitStringLength="8">0x04</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CONST_VAL" spirit:bitStringLength="8">0x05</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -50,7 +50,7 @@
     <spirit:parameter>
       <spirit:name>CONST_VAL</spirit:name>
       <spirit:displayName>Const Val</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CONST_VAL" spirit:order="4">4</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CONST_VAL" spirit:order="4">5</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
